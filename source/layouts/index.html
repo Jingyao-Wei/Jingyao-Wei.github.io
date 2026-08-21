@@ -1,0 +1,116 @@
+{{ define "main" }}
+
+<!-- Hero -->
+<section class="hero" id="top">
+  <div class="hero-photo">
+    <img src="{{ .Site.Params.photo }}" alt="Portrait of {{ .Site.Params.author }}" width="220" height="220" loading="eager">
+  </div>
+  <div class="hero-text">
+    <h1>{{ .Site.Params.author }}</h1>
+    <p class="hero-title">{{ .Site.Params.tagline }}</p>
+    <p class="hero-tagline">{{ .Site.Params.subtitle }}</p>
+    <div class="hero-buttons">
+      <a class="btn btn-primary" href="{{ .Site.Params.cv }}">Download CV</a>
+      <a class="btn" href="mailto:{{ .Site.Params.email }}">Email</a>
+      <a class="btn" href="#research">Research</a>
+    </div>
+  </div>
+</section>
+
+<!-- Bio -->
+<section id="about" class="section">
+  <h2>About</h2>
+  {{ .Content }}
+</section>
+
+<!-- Research -->
+<section id="research" class="section">
+  <h2>Research</h2>
+
+  {{ with .Site.Data.papers.job_market_paper }}
+  <div class="jmp-card">
+    <p class="jmp-label">Job Market Paper</p>
+    <h3 class="paper-title">{{ .title }}{{ if .status }} <span class="badge">{{ .status }}</span>{{ end }}</h3>
+    <p class="paper-authors">{{ if ne .authors "Jingyao Wei" }}{{ .authors }}{{ else }}Single-authored{{ end }}</p>
+    <details>
+      <summary>Abstract</summary>
+      <p>{{ .abstract }}</p>
+    </details>
+    {{ if .pdf }}<p class="paper-links"><a href="{{ .pdf }}">PDF</a></p>{{ end }}
+  </div>
+  {{ end }}
+
+  {{ with .Site.Data.papers.published }}
+  <h3 class="group-heading">Publications</h3>
+  {{ range . }}
+  <div class="paper">
+    <h4 class="paper-title">{{ if .url }}<a href="{{ .url }}">{{ .title }}</a>{{ else }}{{ .title }}{{ end }} <span class="badge badge-pub">published</span></h4>
+    <p class="paper-authors">{{ .authors }}</p>
+    <p class="paper-venue">{{ .venue }}</p>
+    <details>
+      <summary>Abstract</summary>
+      <p>{{ .abstract }}</p>
+    </details>
+    {{ if .pdf }}<p class="paper-links"><a href="{{ .pdf }}">PDF</a></p>{{ end }}
+  </div>
+  {{ end }}
+  {{ end }}
+
+  {{ with .Site.Data.papers.working_papers }}
+  <h3 class="group-heading">Working Papers</h3>
+  {{ range . }}
+  <div class="paper">
+    <h4 class="paper-title">{{ .title }} <span class="badge">working paper</span></h4>
+    <p class="paper-authors">{{ .authors }}</p>
+    <details>
+      <summary>Abstract</summary>
+      <p>{{ .abstract }}</p>
+    </details>
+    {{ if .pdf }}<p class="paper-links"><a href="{{ .pdf }}">PDF</a></p>{{ end }}
+  </div>
+  {{ end }}
+  {{ end }}
+
+  {{ with .Site.Data.papers.in_progress }}
+  <h3 class="group-heading">Work in Progress</h3>
+  {{ range . }}
+  <div class="paper">
+    <h4 class="paper-title">{{ .title }} <span class="badge">{{ .status }}</span></h4>
+    <p class="paper-authors">{{ .authors }}</p>
+  </div>
+  {{ end }}
+  {{ end }}
+</section>
+
+<!-- Teaching -->
+<section id="teaching" class="section">
+  <h2>Teaching</h2>
+  <p class="teaching-intro">Teaching Assistant, Norwegian School of Economics (NHH):</p>
+  <ul class="teaching-list">
+    {{ range .Site.Data.teaching.courses }}
+    <li><span class="course">{{ .course }}</span> <span class="term">{{ .term }}</span></li>
+    {{ end }}
+  </ul>
+</section>
+
+<!-- Presentations -->
+<section id="presentations" class="section">
+  <h2>Presentations</h2>
+  <ul class="teaching-list">
+    {{ range .Site.Data.presentations.items }}
+    <li><span class="course">{{ .venue }}</span> <span class="term">{{ .location }}, {{ .year }}</span></li>
+    {{ end }}
+  </ul>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="section">
+  <h2>Contact</h2>
+  <p>
+    <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a><br>
+    Department of Economics, Norwegian School of Economics (NHH)<br>
+    Helleveien 30, 5045 Bergen, Norway
+  </p>
+</section>
+
+{{ end }}

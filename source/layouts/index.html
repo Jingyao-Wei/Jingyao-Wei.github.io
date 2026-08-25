@@ -51,7 +51,7 @@
       <summary>Abstract</summary>
       <p>{{ .abstract }}</p>
     </details>
-    {{ if .pdf }}<p class="paper-links"><a href="{{ .pdf }}">PDF</a></p>{{ end }}
+    {{ if or .pdf .coverage }}<p class="paper-links">{{ if .pdf }}<a href="{{ .pdf }}">PDF</a>{{ end }}{{ range .coverage }} &middot; <a href="{{ .url }}">{{ .label }}</a>{{ end }}</p>{{ end }}
   </div>
   {{ end }}
   {{ end }}

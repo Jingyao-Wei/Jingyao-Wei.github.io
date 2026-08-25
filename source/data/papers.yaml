@@ -29,6 +29,9 @@ published:
     venue: "Journal of Development Economics, 2026, 103734"
     url: ""
     pdf: "https://heatherschofield.net/wp-content/uploads/2026/02/carvalho-et-al-psych-barriers-to-participation-in-the-labor-market.pdf"
+    coverage:
+      - label: "VoxDev summary"
+        url: "https://voxdev.org/topic/labour-markets/how-mental-health-affects-womens-labour-force-participation-ghana"
     abstract: >-
       Mental health conditions are strongly associated with reduced labor market
       participation, but the underlying channels through which such conditions

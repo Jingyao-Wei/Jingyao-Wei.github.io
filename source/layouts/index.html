@@ -60,8 +60,9 @@
   <h3 class="group-heading">Working Papers</h3>
   {{ range . }}
   <div class="paper">
-    <h4 class="paper-title">{{ .title }} <span class="badge">working paper</span></h4>
+    <h4 class="paper-title">{{ .title }} <span class="badge">{{ .status | default "working paper" }}</span></h4>
     <p class="paper-authors">{{ .authors }}</p>
+    {{ with .venue }}<p class="paper-venue">{{ . }}</p>{{ end }}
     <details>
       <summary>Abstract</summary>
       <p>{{ .abstract }}</p>

@@ -6,7 +6,8 @@ disableKinds = ["taxonomy", "term", "rss"]
 [params]
   author = "Jingyao Wei"
   tagline = "PhD Candidate in Economics, Norwegian School of Economics (NHH)"
-  subtitle = "I study how environmental change and economic conditions shape health and livelihoods in developing countries."
+  subtitle = ""
+  description = "Jingyao Wei is a PhD candidate in Economics at NHH working on development, environmental, and health economics."
   email = "jingyao.wei@nhh.no"
   photo = "/images/photo.jpg"
   cv = "/files/cv.pdf"

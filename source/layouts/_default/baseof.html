@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ .Site.Params.author }} — {{ .Site.Params.tagline }}</title>
-  <meta name="description" content="{{ .Site.Params.author }}: {{ .Site.Params.subtitle }}">
+  <title>{{ .Site.Params.author }} | {{ .Site.Params.tagline }}</title>
+  <meta name="description" content="{{ .Site.Params.description }}">
   <meta name="keywords" content="{{ .Site.Params.keywords }}">
   <meta property="og:title" content="{{ .Site.Params.author }}">
-  <meta property="og:description" content="{{ .Site.Params.subtitle }}">
+  <meta property="og:description" content="{{ .Site.Params.description }}">
   <meta property="og:type" content="website">
   {{ $css := resources.Get "css/main.css" | minify }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}">

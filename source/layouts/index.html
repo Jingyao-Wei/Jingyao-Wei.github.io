@@ -8,7 +8,7 @@
   <div class="hero-text">
     <h1>{{ .Site.Params.author }}</h1>
     <p class="hero-title">{{ .Site.Params.tagline }}</p>
-    <p class="hero-tagline">{{ .Site.Params.subtitle }}</p>
+    {{ with .Site.Params.subtitle }}<p class="hero-tagline">{{ . }}</p>{{ end }}
     <div class="hero-buttons">
       <a class="btn btn-primary" href="{{ .Site.Params.cv }}">Download CV</a>
       <a class="btn" href="mailto:{{ .Site.Params.email }}">Email</a>
@@ -66,7 +66,7 @@
       <summary>Abstract</summary>
       <p>{{ .abstract }}</p>
     </details>
-    {{ if .pdf }}<p class="paper-links"><a href="{{ .pdf }}">PDF</a></p>{{ end }}
+    {{ if or .pdf .coverage }}<p class="paper-links">{{ if .pdf }}<a href="{{ .pdf }}">PDF</a>{{ end }}{{ range .coverage }} &middot; <a href="{{ .url }}">{{ .label }}</a>{{ end }}</p>{{ end }}
   </div>
   {{ end }}
   {{ end }}

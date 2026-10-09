@@ -1,26 +1,26 @@
 job_market_paper:
-  title: "When Solar Reaches the Poor: Forest and Health Co-Benefits in Rural China"
+  title: "Solar Poverty Alleviation and the Green-versus-Green Trade-off"
   authors: "Jingyao Wei"
   year: 2026
   status: "working paper"
   pdf: ""
   abstract: >-
-    Solar power is expanding into poor rural areas worldwide, yet little is known
-    about what grid-connected solar does to the communities that host it beyond
-    producing electricity. I study China's Solar Energy Poverty Alleviation
-    Program, which built solar stations in and around designated poverty
-    counties and assigned registered poor households as beneficiaries.
-    Combining the program registry with satellite forest-loss data and a
-    national household panel, I find that forest loss within 15 kilometers of
-    host villages fell by roughly 12 percent during the program era relative to
-    cells farther away, and that the probability that a child's most serious
-    recorded illness is respiratory fell by 11 percentage points, about 18
-    percent of the sample mean. Placebo illness categories and poverty counties
-    without the program show no detected change. Around other detected solar
-    plants, not matched to program villages, forest loss rose instead: the
-    decline is specific to the program's host villages, not to solar deployment
-    as such. The local consequences of solar investment depend on where and how
-    it is deployed.
+    Solar investment can affect local environments beyond the land occupied by
+    panels. I focus on whether directing solar revenues to poor communities
+    moderates those consequences. As motivation, I document that forest loss
+    rises near solar installations in China, with larger increases in poorer
+    areas. I study China's Solar Energy Poverty Alleviation Program, which
+    assigned benefits from grid-connected solar projects to poor households and
+    villages. Combining the program registry, satellite forest-loss data, and a
+    national household panel, I find that forest loss near program host
+    villages declines by 0.62 hectares per cell-year. Households shift from
+    firewood to electricity for cooking, and electricity spending does not rise
+    as it does in other poverty counties. The probability of respiratory
+    illness among children declines by 10.8 percentage points, while other
+    common illnesses show no change, consistent with reduced exposure to indoor
+    smoke from the household energy transition. These findings suggest that
+    directing renewable energy investment to benefit local households can shape
+    its local environmental and health consequences.
 
 published:
   - title: "Psychological Barriers to Participation in the Labor Market: Evidence from Rural Ghana"

@@ -1,26 +1,32 @@
 job_market_paper:
-  title: "Solar Poverty Alleviation and the Green-versus-Green Trade-off"
+  title: "When Solar Energy Reaches the Poor: Evidence from Solar Expansion in China"
   authors: "Jingyao Wei"
   year: 2026
   status: "working paper"
   pdf: ""
   abstract: >-
-    Solar investment can affect local environments beyond the land occupied by
-    panels. I focus on whether directing solar revenues to poor communities
-    moderates those consequences. As motivation, I document that forest loss
-    rises near solar installations in China, with larger increases in poorer
-    areas. I study China's Solar Energy Poverty Alleviation Program, which
-    assigned benefits from grid-connected solar projects to poor households and
-    villages. Combining the program registry, satellite forest-loss data, and a
-    national household panel, I find that forest loss near program host
-    villages declines by 0.62 hectares per cell-year. Households shift from
-    firewood to electricity for cooking, and electricity spending does not rise
-    as it does in other poverty counties. The probability of respiratory
-    illness among children declines by 10.8 percentage points, while other
-    common illnesses show no change, consistent with reduced exposure to indoor
-    smoke from the household energy transition. These findings suggest that
-    directing renewable energy investment to benefit local households can shape
-    its local environmental and health consequences.
+    I study whether linking solar investment to poverty alleviation can reduce
+    the local environmental costs of solar expansion in China. I use satellite
+    data on 30,023 solar plants to study forest loss around nearby villages.
+    Using a spatial difference-in-differences design, I estimate that annual
+    forest loss near these villages rises by 7.7 percent after the first nearby
+    plant appears in satellite imagery, relative to changes in forest farther
+    away. The estimated increase is larger in lower-income counties. I then
+    study China's Solar Energy Poverty Alleviation Program (SEPAP), which
+    financed solar stations and assigned their revenues to poor households and
+    villages. Using the same spatial design, I estimate a 10.7 percent decline
+    in forest loss near host villages after the program began in 2014. To
+    examine possible mechanisms, I use household panel data and a
+    difference-in-differences design based on SEPAP county designation in 2014
+    and 2016. The share of households reporting firewood as their main cooking
+    fuel falls by about 7 percent, while the share reporting electricity rises
+    by 46 percent. Children's reported respiratory illness also declines by
+    about 17 percent, with no detectable changes in other reported diseases.
+    This decline is larger among children who spent more time on household
+    chores before designation. These patterns are consistent with reduced
+    firewood reliance and lower exposure to indoor smoke. The findings suggest
+    that solar development linked to poverty alleviation can benefit local
+    forests and children's health.
 
 published:
   - title: "Psychological Barriers to Participation in the Labor Market: Evidence from Rural Ghana"

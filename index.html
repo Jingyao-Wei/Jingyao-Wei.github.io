@@ -1,187 +1,678 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-	<meta name="generator" content="Hugo 0.139.3">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Jingyao Wei | PhD Candidate in Economics, Norwegian School of Economics (NHH)</title>
-  <meta name="description" content="Jingyao Wei is a PhD candidate in Economics at NHH working on development, environmental, and health economics.">
-  <meta name="keywords" content="Development Economics, Environmental Economics, Health Economics, Jingyao Wei, NHH">
-  <meta property="og:title" content="Jingyao Wei">
-  <meta property="og:description" content="Jingyao Wei is a PhD candidate in Economics at NHH working on development, environmental, and health economics.">
-  <meta property="og:type" content="website">
-  
-  <link rel="stylesheet" href="/css/main.min.css">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Jingyao Wei",
-    "email": "mailto:jingyao.wei@nhh.no",
-    "jobTitle": "PhD Candidate in Economics",
-    "affiliation": {
-      "@type": "Organization",
-      "name": "Norwegian School of Economics (NHH)"
-    }
-  }
-  </script>
-  
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Income stability and health · Revised prediction demo</title>
+<style>
+:root{--ink:#233748;--muted:#5c6d7b;--line:#dce3e8;--paper:#fff;--bg:#f4f6f8;--red:#a9283d;--navy:#234c69;--gold:#edc53e;--green:#438761}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Arial,sans-serif}button,input,select{font:inherit}button,a,input{touch-action:manipulation}button{cursor:pointer}button:disabled{cursor:default;opacity:.5}button:focus-visible,a:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid #2c73b3;outline-offset:3px}a{color:var(--navy)}.shell{max-width:1040px;margin:0 auto;padding:26px 26px 40px}.topbar{display:flex;justify-content:space-between;gap:16px;align-items:center;margin-bottom:18px}.brand{font-weight:700;letter-spacing:.1px}.version{font-size:12px;display:block;color:var(--muted);font-weight:400}.top-actions{display:flex;gap:8px;align-items:center}.quiet{background:white;border:1px solid var(--line);padding:9px 14px;border-radius:7px;color:var(--navy);min-height:42px}.demo-strip{font-size:13px;color:var(--muted);margin:0 0 20px}.progress-head{display:flex;justify-content:space-between;gap:12px;font-size:13px;color:var(--muted);margin-bottom:8px}.progress{height:4px;background:#e1e6ea;border-radius:4px;margin-bottom:24px;overflow:hidden}.progress>span{height:100%;display:block;background:var(--navy);transition:width .2s}.card{background:white;border:1px solid var(--line);border-radius:12px;padding:30px 38px;min-height:420px}.kicker{color:var(--navy);font-size:12px;font-weight:700;letter-spacing:1.3px;text-transform:uppercase;margin-bottom:9px}h1{font-size:28px;line-height:1.2;letter-spacing:-.5px;margin:0 0 18px}h2{font-size:19px;line-height:1.35;margin:26px 0 12px}h3{font-size:17px;margin:16px 0 6px}p{margin:0 0 15px}.lead{font-size:18px;line-height:1.6}.muted{color:var(--muted)}.small{font-size:13px}.prose{max-width:780px}.meta{font-size:13px;color:var(--muted);margin-top:18px}.draft-note{background:#fff5df;border:1px solid #ead7a6;border-radius:7px;padding:11px 14px;font-size:14px;margin:15px 0}.draft-tag{font-size:11px;letter-spacing:.4px;background:#fff2d3;color:#725416;padding:4px 8px;border-radius:4px;display:inline-block;margin-bottom:9px}.arms{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:24px 0}.arm{padding:16px 18px;background:#f7f9fa;border-radius:7px;border-left:3px solid var(--line)}.arm h2{margin:0 0 7px;font-size:16px}.arm p{font-size:14px;margin:0}.arm.s{border-left-color:#c3a226}.arm.p{border-left-color:#b62640}.arm.r{border-left-color:#3e805e}.next-row{display:flex;justify-content:space-between;align-items:center;gap:18px;margin-top:24px}.next-row p{font-size:13px;color:var(--muted);margin:0;max-width:570px}.primary{border:1px solid var(--red);background:var(--red);color:white;padding:12px 21px;border-radius:7px;min-height:47px;white-space:nowrap;font-weight:600}.secondary{background:white;border:1px solid var(--navy);color:var(--navy);padding:11px 18px;border-radius:7px;min-height:45px}.unit-label{font-size:13px;color:var(--muted);margin:18px 0 3px}.plot{width:100%;min-width:0}.plot svg{display:block;width:100%;height:auto;overflow:visible}.handle{cursor:ns-resize;touch-action:none;outline:none}.handle:focus .hit{fill:#dcecff;fill-opacity:.55;stroke:#326fa8;stroke-width:2}.legend{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 20px;font-size:13px;margin:3px 0 16px}.legend span{display:inline-flex;align-items:center;gap:6px}.legend svg{width:22px;height:22px;flex:none}.plot-help{font-size:13px;color:var(--muted);margin:12px 0}.answer-status{font-size:14px;font-weight:600;margin:12px 0}.error{color:#a51d34}.grid-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:14px}th,td{padding:9px 8px;border-bottom:1px solid #e5e9ed;text-align:center}thead th{background:#f4f7f9;font-size:13px;font-weight:600}th[scope=row]{text-align:left;font-weight:500;white-space:nowrap}.estimate{width:100%;max-width:155px;min-width:62px;min-height:43px;border:1px solid #a8b5c0;border-radius:6px;padding:8px;text-align:center;color:var(--ink);font-size:16px}.estimate[aria-invalid=true]{border:2px solid #a51d34}.axis-note{font-size:13px;text-align:center;color:var(--muted);margin-top:3px}.model-note{font-size:13px;color:var(--muted);margin-top:18px}.choice-list{display:grid;gap:14px;margin:25px 0}.choice{display:flex;gap:13px;align-items:flex-start;padding:17px;border:1px solid var(--line);border-radius:7px;cursor:pointer}.choice input{width:20px;height:20px;flex:none;margin-top:3px;accent-color:var(--red)}.choice strong{display:block}.choice span{font-size:14px;color:var(--muted)}.choices-foot{font-size:13px;color:var(--muted)}.download-row{display:flex;flex-wrap:wrap;gap:12px;margin:22px 0}details{border-top:1px solid var(--line);padding:14px 0}summary{cursor:pointer;font-weight:600}details>p{padding-top:12px}.summary-table{min-width:620px}.summary-table td:nth-child(2){text-align:left}.summary-table .changed{background:#fff5dc}.summary-card{margin:24px 0}.summary-card h2{margin:0 0 8px}.faq-body h2{font-size:17px;margin-top:24px}.faq-body p{font-size:15px}.window-explain{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:24px 0}.window-explain div{background:#f6f8fa;padding:18px;text-align:center;border-radius:7px}.window-explain strong{display:block;font-size:25px;color:var(--navy)}.window-explain span{font-size:13px;color:var(--muted)}.income-note{font-size:14px;color:#735318}.footer{font-size:12px;color:var(--muted);margin-top:22px}.footer button{font-size:12px;border:0;background:transparent;color:var(--navy);text-decoration:underline;padding:4px}.overview-list{padding-left:20px}.overview-list li{margin:8px 0}dialog{border:1px solid var(--line);border-radius:12px;padding:0;max-width:840px;width:calc(100% - 30px);max-height:87vh;color:var(--ink)}dialog::backdrop{background:rgba(19,35,49,.42)}.dialog-head{display:flex;align-items:center;justify-content:space-between;gap:18px;border-bottom:1px solid var(--line);padding:16px 24px;position:sticky;top:0;background:white;z-index:1}.dialog-head h2{margin:0}.dialog-body{padding:8px 24px 24px}.readonly-value{font-weight:600}noscript{display:block;padding:24px;background:#fff2d3}.sr-only{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+@media(max-width:650px){.shell{padding:18px 12px 30px}.topbar{align-items:flex-start}.brand{font-size:15px;max-width:180px}.quiet{padding:8px 10px;font-size:13px}.top-actions{gap:5px}.card{padding:22px 15px;border-radius:9px}h1{font-size:24px}.lead{font-size:16px}.arms{grid-template-columns:1fr}.next-row{align-items:stretch;flex-direction:column}.primary{width:100%}.window-explain{gap:7px}.window-explain div{padding:14px 5px}th,td{padding:7px 4px}.estimate{min-width:55px;padding:6px 2px}.legend{gap:6px 12px;justify-content:flex-start}.demo-strip{font-size:12px}.dialog-head{padding:14px 16px}.dialog-body{padding:8px 16px 20px}.unit-label{font-size:12px}.download-row button{flex:1}.progress-head{font-size:12px}.plot-help{font-size:12px}}
+
+/* Keep the graph windows and table columns aligned, including on phones. */
+.prediction-interface{--comparison-width:88px}
+.plot-title{text-align:center;padding-left:var(--comparison-width);font-size:21px;margin:22px 0 0;letter-spacing:0}
+.prediction-question{font-size:18px;line-height:1.5;margin-bottom:12px}
+.estimate-table{table-layout:fixed;margin:0 0 16px}
+.estimate-table .comparison-column{width:var(--comparison-width,24%)}
+.estimate-table th[scope=row]{white-space:normal;font-size:13px;padding-left:0}
+.estimate-table thead th{background:transparent;font-size:14px}
+.estimate-table thead tr:first-child th{border-bottom:0;padding-bottom:0}
+.estimate-table thead tr:last-child th{padding-top:2px}
+.row-comparison{display:flex;align-items:center;gap:6px;line-height:1.3}
+.row-comparison svg{width:20px;height:20px;flex:none}
+.answer-status:empty{display:none}
+.keyboard-help{font-size:12px}
+.practice-tasks{font-size:14px;padding-left:24px;margin:15px 0}
+.practice-tasks li{margin:8px 0;padding-left:3px}
+.practice-tasks .done{color:#28633e}
+@media(max-width:650px){.prediction-question{font-size:16px}.plot-title{font-size:19px}.estimate-table th[scope=row]{font-size:11px}.row-comparison{gap:3px}.row-comparison svg{width:16px;height:16px}.estimate-table .estimate{min-width:0}.legend{font-size:12px;justify-content:center}.legend svg{width:18px;height:18px}.estimate-table th,.estimate-table td{padding-left:3px;padding-right:3px}}
+
+/* Earlier-page browsing never changes the active answer page. */
+.nav-controls{display:flex;gap:10px;align-items:center;justify-content:flex-end;flex-wrap:wrap;flex:none}
+.next-row{flex-wrap:wrap}.next-row>p{flex:1;min-width:230px}
+.locked-note{background:#edf4f8;border-left:3px solid var(--navy);padding:12px 15px;font-size:14px;margin-bottom:18px}
+@media(max-width:650px){.nav-controls{width:100%}.nav-controls button{flex:1 1 auto}.nav-controls .primary{width:auto}.nav-controls #returnButton{flex-basis:100%;order:3}.next-row>p{min-width:0}}
+
+.study-facts{padding-left:22px}.study-facts li{margin:9px 0}
+.design-table{table-layout:fixed}.design-table caption{text-align:left;font-size:18px;font-weight:700;padding:12px 0}.design-table th:first-child{width:20%}.design-table td{text-align:left;vertical-align:top}
+.benchmark{background:#edf4f8;border-left:3px solid var(--navy);padding:12px 16px;margin:18px 0;font-size:14px}.benchmark p{margin:6px 0}
+.mechanism-matrix th:first-child{width:32%;text-align:left}.mechanism-matrix th{font-size:12px;white-space:normal}.mechanism-matrix td{text-align:center}.mechanism-matrix input{width:19px;height:19px;accent-color:var(--navy)}.mechanism-matrix label{display:block;padding:10px 0;cursor:pointer}.mobile-rating{display:none}
+fieldset{border:1px solid var(--line);border-radius:7px;margin:18px 0;padding:15px}.reason-choice{display:block;padding:8px 0}.usd-reference{display:block;font-size:11px;color:var(--muted)}
+.field-label{display:block;font-weight:600;margin:18px 0 8px}.text-field,textarea,select{box-sizing:border-box;max-width:100%;width:100%;font:inherit;color:var(--ink);border:1px solid #b7c5d0;border-radius:6px;padding:11px}textarea{resize:vertical}.written-answer{white-space:pre-wrap}
+@media(max-width:650px){.design-table{font-size:12px}.design-table th:first-child{width:23%}.mechanism-matrix,.mechanism-matrix tbody,.mechanism-matrix tr{display:block;width:100%}.mechanism-matrix thead{display:none}.mechanism-matrix tr{padding:14px 0;border-bottom:1px solid var(--line)}.mechanism-matrix th:first-child{display:block;width:100%;font-size:14px;border:0}.mechanism-matrix td{display:inline-block;width:33.33%;padding:0;border:0}.mechanism-matrix label{display:flex;align-items:center;gap:5px;font-size:12px}.mobile-rating{display:inline}}
+/* Responsive layout: shared answers, wider touch targets, and readable phone tables. */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+.shell{padding-left:max(16px,env(safe-area-inset-left));padding-right:max(16px,env(safe-area-inset-right))}
+.topbar,.top-actions{flex-wrap:wrap}.brand,.prose,.choice>div{min-width:0}
+.top-actions{margin-left:auto}.quiet,.secondary,.primary{min-height:44px;white-space:normal}
+.card,.dialog-body{overflow-wrap:anywhere}.nav-controls{max-width:100%}
+select:focus-visible,textarea:focus-visible{outline:3px solid #2c73b3;outline-offset:3px}
+.graph-picker,.plot-unit,.phone-entry-help,.sign-toggle{display:none}
+.is-compact .graph-picker{display:block;margin:16px 0 8px}
+.graph-picker label{display:block;font-size:14px;font-weight:600;margin-bottom:5px}
+.graph-picker select{min-height:46px;font-size:16px;background:white}
+.graph-picker p{font-size:13px;color:var(--muted);margin:6px 0}
+.is-compact .plot-title{padding-left:0}.is-compact .plot-unit{display:block;text-align:center;font-size:14px;color:var(--muted);margin:8px 0 0}
+.is-compact .phone-entry-help{display:block;font-size:13px;color:var(--muted);margin:10px 0}
+.is-compact .sign-toggle{display:block;width:100%;max-width:155px;min-height:44px;margin:5px auto 0;border:1px solid var(--line);border-radius:6px;background:#f4f7f9;color:var(--navy);font-size:18px}
+.is-compact .estimate{min-height:46px}.is-compact .estimate-table tr.graph-selected{background:#f2f7fb}
+.is-compact .estimate-table td{vertical-align:top}.is-compact .estimate-table .usd-reference{overflow-wrap:anywhere}
+.reason-choice{display:flex;gap:10px;align-items:flex-start;min-height:44px}.reason-choice input{width:20px;height:20px;flex:none;margin-top:3px}
+dialog{max-height:87dvh}.dialog-head{flex-wrap:wrap}.dialog-head .quiet{flex-shrink:0}.dialog-body{overscroll-behavior:contain}
+@media(max-width:650px){
+  .shell{padding-top:16px;padding-bottom:max(28px,env(safe-area-inset-bottom))}.topbar{gap:12px}.brand{max-width:none;flex:1 1 190px}
+  .top-actions{flex:1 1 100%;margin:0}.top-actions button{flex:1}.card{padding:22px 14px;min-height:0}
+  .next-row{gap:14px}.nav-controls{display:grid;grid-template-columns:1fr;width:100%}.nav-controls button{width:100%}
+  .nav-controls #nextButton{order:1}.nav-controls #backButton{order:2}.nav-controls #returnButton{order:3}
+  .estimate-table th[scope=row]{font-size:12px}.estimate-table .row-comparison{flex-wrap:wrap}
+  .mechanism-matrix tr{display:flex;flex-wrap:wrap;gap:5px 0}.mechanism-matrix th:first-child{flex:0 0 100%;font-size:16px}
+  .mechanism-matrix td{width:50%;padding-right:8px}.mechanism-matrix label{min-height:46px;padding:9px 6px;font-size:14px;gap:8px}
+  .mechanism-matrix input{flex:none;width:22px;height:22px}.choice{padding:14px}.choice span{font-size:15px}
+  .design-table,.design-table tbody,.design-table tr,.design-table th,.design-table td{display:block;width:100%}
+  .design-table{font-size:15px}.design-table caption{display:block;width:100%}.design-table thead{display:none}.design-table tr{padding:14px 0;border-bottom:1px solid var(--line)}
+  .design-table th:first-child{width:100%;font-size:16px;font-weight:700;padding:0 0 6px;border:0}
+  .design-table td{padding:5px 0;border:0}.design-table td::before{display:block;font-size:12px;font-weight:700;color:var(--muted)}
+  .design-table td:nth-child(2)::before{content:'Bags per period'}.design-table td:nth-child(3)::before{content:'What is known in advance?'}
+  .summary-table{min-width:0}.summary-table thead{display:none}.summary-table,.summary-table tbody{display:block}
+  .summary-table tr{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px;padding:12px 0;border-bottom:1px solid var(--line)}
+  .summary-table td{display:block;min-width:0;border:0;padding:4px;overflow-wrap:anywhere;text-align:left}
+  .summary-table td:nth-child(2){grid-column:2 / -1}.summary-table td::before{display:block;content:attr(data-label);font-size:12px;color:var(--muted)}
+  .download-row{display:grid;grid-template-columns:1fr}.download-row button{width:100%}
+  .footer button{min-height:44px;font-size:13px}.window-explain{grid-template-columns:1fr}.window-explain div{padding:12px}
+  .keyboard-help{display:none}
+}
+@media(prefers-reduced-motion:reduce){.progress>span{transition:none}}
+</style>
 </head>
 <body>
-  <a class="skip-link" href="#about">Skip to content</a>
-  <header class="site-header">
-    <nav class="nav" aria-label="Main navigation">
-      <a class="nav-name" href="#top">Jingyao Wei</a>
-      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
-      <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle menu"><span></span></label>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#research">Research</a></li>
-        <li><a href="#teaching">Teaching</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="/files/cv.pdf">CV</a></li>
-      </ul>
-    </nav>
-  </header>
+<noscript>This interactive demo needs JavaScript enabled in your browser.</noscript>
+<div class="shell">
+  <header class="topbar"><div class="brand">Income stability &amp; health<span class="version">Prediction survey · 26 October 2026 · After PI discussion</span></div><div class="top-actions"><button class="quiet" id="reviewButton" hidden>First answers</button><button class="quiet" id="faqButton">FAQ &amp; reference</button></div></header>
+  <p class="demo-strip">Interactive demo · answers stay in this browser tab and can be downloaded. Nothing is submitted.</p>
+  <div class="progress-head"><span id="phaseLabel"></span><span id="stepLabel"></span></div><div class="progress"><span id="progressFill"></span></div>
+  <main id="screen" class="card" tabindex="-1"></main>
+  <div id="navigation" class="next-row"></div>
+  <footer class="footer">Study design prototype. Proposed content is labelled on the relevant pages. <button id="resetButton">Start a new demo</button><span id="storageNotice"></span></footer>
+</div>
+<dialog id="referenceDialog" aria-labelledby="dialogTitle"><div class="dialog-head"><h2 id="dialogTitle"></h2><button class="quiet" id="closeDialog" aria-label="Close reference">Close</button></div><div id="dialogBody" class="dialog-body"></div></dialog>
+<script>
+"use strict";
 
-  <main id="main">
-    
+// REVIEW SETTINGS: archived alternatives remain disabled in PANELS below.
+// This standalone demo does not submit data to Qualtrics or any other service.
+const SETTINGS = {
+  version: "2026-10-26-v9",
+  min: -0.5, max: 0.5, tick: 0.25, step: 0.01,
+  windows: ["1–2", "1–4", "1–6"],
+  // Remaining study inputs: meeting examples are not approved numerical benchmarks.
+  additionalInformation: "",
+  // All money values must use the same household denominator and two-week period.
+  benchmark: {householdConsumption: null, studyIncome: null, source: "", usdPerGhc: null, exchangeRateDate: "", exchangeRateSource: ""},
+  consumptionPeriod: "two-week period",
+  mentalHealthDefinition: "The mental-health index combines depression symptoms (PHQ-2) and anxiety symptoms (GAD-2). Scores are oriented so that higher means better mental health and standardized using the Control group before the programme. Enter differences in standard deviations (SD): positive means better mental health, negative means worse, and zero means no difference.",
+  mentalHealthPending: "Definition follows the primary PHQ-2/GAD-2 index in the current analysis code. Confirm that this is the final survey outcome before fielding. The meeting agreed a response range of −0.50 to +0.50 SD."
+};
+const COLORS = {
+  stable: {short:"S–C",label:"Stable − Control",fill:"#f0cc3e",stroke:"#897015",shape:"circle"},
+  unstable: {short:"U–C",label:"Unstable − Control",fill:"#6186b3",stroke:"#36587b",shape:"diamond"},
+  predictable: {short:"P–C",label:"Predictable − Control",fill:"#bc2d43",stroke:"#882034",shape:"square"},
+  risky: {short:"R–C",label:"Risky − Control",fill:"#438761",stroke:"#255638",shape:"triangle"},
+  matched: {short:"P–R",label:"Matched calendars: Predictable − Risky",fill:"#7756a4",stroke:"#523377",shape:"diamond"},
+  early: {short:"Early: P–R",label:"Early-income calendars: P − R",fill:"#ce833b",stroke:"#90551f",shape:"circle"},
+  late: {short:"Late: P–R",label:"Late-income calendars: P − R",fill:"#6578b4",stroke:"#3b4f88",shape:"square"}
+};
+const PANELS = [
+  {id:"MH_slider_1",enabled:false,section:"Mental health",title:"Stable and unstable income",unit:"Standard deviation changes relative to Control",unitCode:"sd",series:[COLORS.stable,COLORS.unstable],
+   description:"How much higher or lower will the mental-health index be in the Stable arm and the pooled Unstable group compared with Control?",
+   explanation:"Enter one coefficient for each pooled reference window. A value of 0.20 means the mental-health index is 0.20 standard deviations higher than in Control. The direction of better mental health depends on the index's scoring; that direction is not specified in this draft."},
+  {id:"MH_slider_2",enabled:true,section:"Mental health",title:"Mental health",unit:"Standard deviation changes relative to Control",unitCode:"sd",series:[COLORS.stable,COLORS.predictable,COLORS.risky],
+   description:"How much better or worse will mental health be in each treatment arm compared with Control?",
+   explanation:"Enter three separate treatment–control differences in standard deviations. Positive values mean better mental health in the treatment arm; negative values mean worse mental health. These differences do not have to add up to anything."},
+  {id:"MH_slider_3",context:"A work schedule is the number of bags assigned in each of the six periods. Here, matching means the same number in Period 1, the same number in Period 2, and so on through Period 6. Predictable participants know their whole schedule from the start. Risky participants discover each period’s assignment at its start. Compare assigned work, not necessarily completed work.",enabled:false,section:"Mental health",title:"Compare matched work calendars",unit:"Standard deviation difference: Predictable minus Risky",unitCode:"sd",series:[COLORS.matched],draft:true,
+   description:"How much better or worse will mental health be in the Predictable arm compared with the Risky arm when participants were assigned the same number of bags in every period?",
+   explanation:"Compare the Predictable and Risky groups within the same six-period sequence of assigned bags. Enter Predictable minus Risky in standard deviations: positive means better mental health in Predictable, and negative means worse. The matching and estimation rules remain for the PI meeting.",
+   draftNote:"Working interpretation of MH_slider_3. The document requests matched calendars but does not define the exact coefficient. This draft uses Predictable − Risky within matched realized calendars."},
+  {id:"MH_slider_4",context:"Use the same matching rule as the previous page: the assigned number of bags must match in every period. For this proposal, each schedule has three periods with 15 bags and three with 3 bags. Earlier means at least two 15-bag periods fall in Periods 1–3; later means at least two fall in Periods 4–6. These definitions are provisional for PI discussion.",enabled:false,section:"Mental health",title:"Income timing and anticipation",unit:"Standard deviation difference: Predictable minus Risky",unitCode:"sd",series:[COLORS.early,COLORS.late],draft:true,
+   description:"How much better or worse will mental health be in the Predictable arm compared with the Risky arm when their assigned work schedules match, separately for schedules with more work earlier and later?",
+   explanation:"Within each timing group, compare Predictable and Risky participants assigned the same number of bags in every period. Enter Predictable minus Risky in standard deviations: positive means better mental health in Predictable, and negative means worse. This proposed split does not by itself isolate optimism or dread. The timing definition and estimator remain for the PI meeting.",
+   draftNote:"Working interpretation of MH_slider_4, for discussion. Early- versus late-income calendars are an editable way to explore anticipation. The document does not yet specify the optimism/dread measure."},
+  {id:"CON_slider_1_log",proposalVersion:1,proposalLabel:"Log points",preferredBy:"HS",documentLabel:"CON_slider_1",enabled:false,section:"Consumption",title:"Household consumption",unit:"Log-point changes relative to Control",unitCode:"log_points",series:[COLORS.stable,COLORS.predictable,COLORS.risky],alternative:true,
+   description:"How much higher or lower will total household consumption be in each treatment arm compared with Control, measured in log points?",
+   explanation:"Enter log points: 0.10 log points corresponds to approximately 10.5% higher consumption. −0.10 corresponds to approximately 9.5% lower consumption. Zero means no difference. This is a linear axis measured in log points, not a logarithmic axis."},
+  {id:"CON_slider_1_sd",proposalVersion:2,proposalLabel:"Standard deviations",documentLabel:"CON_slider_1",enabled:false,section:"Consumption",title:"Household consumption",unit:"Standard deviation changes relative to Control",unitCode:"sd",series:[COLORS.stable,COLORS.predictable,COLORS.risky],alternative:true,
+   description:"How much higher or lower will total household consumption be in each treatment arm compared with Control, measured in standard deviations?",
+   explanation:"Enter standard deviation units: 0.20 means consumption is 0.20 standard deviations higher than in Control. −0.20 means it is 0.20 standard deviations lower. The reference sample and standardization of consumption need to be specified before fielding this version."},
+  {id:"CON_slider_1_proportion",proposalVersion:3,proposalLabel:"Proportional changes",documentLabel:"CON_slider_1",enabled:false,section:"Consumption",title:"Household consumption",unit:"Proportional changes relative to Control",unitCode:"proportion",series:[COLORS.stable,COLORS.predictable,COLORS.risky],alternative:true,
+   description:"How much higher or lower will total household consumption be in each treatment arm compared with Control, expressed as a proportional change?",
+   explanation:"Enter a proportion, not a whole-number percentage: 0.10 means 10% higher consumption, −0.10 means 10% lower, and 0 means no difference. The scale −1 to +1 corresponds to −100% to +100%."}
+  ,{id:"CON_levels",enabled:true,section:"Consumption",title:"Household consumption",unit:"GHC per household per two-week period",unitCode:"ghc_per_household_two_weeks",money:true,min:-100,max:100,tick:50,step:1,
+   series:[COLORS.stable,COLORS.predictable,COLORS.risky],
+   description:"How much higher or lower will average household consumption be in each treatment arm compared with Control, in Ghana cedis (GHC) per two-week period?",
+   explanation:"Enter the difference in the amount consumed, in GHC per household per two-week period. Positive means higher consumption in the treatment arm; negative means lower. Each cumulative window pools observations from those periods; do not enter the sum of spending over the whole window. The household denominator and consumption recall period remain subject to final study-team confirmation."},
+  {id:"CON_high_low",enabled:true,section:"Consumption",title:"High versus low work periods",unit:"GHC per household per two-week period",unitCode:"ghc_per_household_two_weeks",money:true,min:-100,max:100,tick:50,step:1,windows:["1–6"],windowHeading:"Study periods",draft:true,
+   series:[{...COLORS.predictable,short:"Predictable: high − low",label:"Predictable: high − low"},{...COLORS.risky,short:"Risky: high − low",label:"Risky: high − low"}],
+   context:"Compare periods with 15 assigned bags (high work) with periods with 3 assigned bags (low work), separately within Predictable and Risky. Predictable participants know the full schedule in advance; Risky participants learn each assignment at the start of that period.",
+   description:"Within each arm, how much higher or lower is average household consumption in high-work periods than in low-work periods?",
+   explanation:"Enter high-work minus low-work consumption in GHC per household per two-week period, separately for Predictable and Risky. Zero means equal average consumption in high- and low-work periods. A negative answer means consumption is lower in high-work periods. This comparison is within each arm, not relative to Control, and uses observations across all six periods.",
+   draftNote:"Meeting proposal implemented for review: one high-minus-low estimate per arm across all six periods. Confirm the estimation sample, adjustment for period effects, and whether to use total consumption or food spending before fielding."}
+];
 
+const MECHANISMS = [
+  {id:"consumption_level",label:"How much households can consume"},
+  {id:"consumption_variation",label:"How much consumption varies across time"},
+  {id:"planning_effort",label:"The mental effort of planning spending and managing changing income"},
+  {id:"expectations",label:"Expectations or worries about future income"}
+];
+const RATINGS = ["Not at all", "Slightly", "Moderately", "Very", "Extremely", "Unsure"];
 
-<section class="hero" id="top">
-  <div class="hero-photo">
-    <img src="/images/photo.jpg" alt="Portrait of Jingyao Wei" width="220" height="220" loading="eager">
-  </div>
-  <div class="hero-text">
-    <h1>Jingyao Wei</h1>
-    <p class="hero-title">PhD Candidate in Economics, Norwegian School of Economics (NHH)</p>
-    
-    <div class="hero-buttons">
-      <a class="btn btn-primary" href="/files/cv.pdf">Download CV</a>
-      <a class="btn" href="mailto:jingyao.wei@nhh.no">Email</a>
-      <a class="btn" href="#research">Research</a>
-    </div>
-  </div>
-</section>
+const enabledPanels = PANELS.filter(panel=>panel.enabled);
+const infoScreens = ["welcome","instructions","tutorial"];
+const PRACTICE_PANEL = {
+  id:"tutorial",title:"Practice score",unit:"Practice difference (fictional units)",
+  series:[{...COLORS.stable,short:"Example A",label:"Example A"},{...COLORS.predictable,short:"Example B",label:"Example B"},{...COLORS.risky,short:"Example C",label:"Example C"}]
+};
+const screen = document.getElementById("screen");
+const navigation = document.getElementById("navigation");
+const dialog = document.getElementById("referenceDialog");
+const STORAGE_KEY = "sspp-slider-demo-" + SETTINGS.version + "-" + enabledPanels.map(panel=>panel.id).join("-");
+let resizeObserver = null;
 
+function newState() {
+  return {version:SETTINGS.version,startedAt:new Date().toISOString(),phase:"first",index:0,browseIndex:null,first:{},drafts:{},revised:{},revisionDrafts:{},practice:{values:Array(9).fill(""),tasks:[false,false,false],completedAt:null},mechanismDraft:{ratings:{},other:"",otherRating:"",selected:[],details:{}},mechanisms:null,mechanismExplanationSavedAt:null,demographicDraft:{age:"",country:"",discipline:"",title:""},demographics:null,informationSeenAt:null,revisionSelection:null,revisionRequested:null,revisionChoiceAt:null,finishedAt:null};
+}
+function loadState() {
+  try {
+    const saved=JSON.parse(sessionStorage.getItem(STORAGE_KEY));
+    if (saved && saved.version===SETTINGS.version) return saved;
+  } catch (_) { /* The demo also works when browser storage is unavailable. */ }
+  return newState();
+}
+let state=loadState();
+function persist() {
+  try { sessionStorage.setItem(STORAGE_KEY,JSON.stringify(state)); }
+  catch (_) { document.getElementById("storageNotice").textContent=" Browser storage is unavailable; keep this page open or download your answers."; }
+}
+function escapeHTML(value) {
+  return String(value).replace(/[&<>"']/g,char=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[char]));
+}
+function format(value) { return (Math.abs(value)<0.000001?0:value).toFixed(2); }
+function panelWindows(panel) { return panel.windows||SETTINGS.windows; }
+function parseAnswer(raw,panel=PRACTICE_PANEL) {
+  const text=String(raw).trim();
+  if (!text) return {value:null,error:"",valid:false};
+  if (!/^[+-]?(?:\d+(?:[.,]\d*)?|[.,]\d+)$/.test(text)) return {value:null,error:"Enter a number.",valid:false};
+  const value=Number(text.replace(",",".")),min=panel.min??SETTINGS.min,max=panel.max??SETTINGS.max;
+  if (!Number.isFinite(value)||Math.abs(value)>Number.MAX_SAFE_INTEGER/100) return {value:null,error:"Enter a finite amount that can be recorded to two decimal places.",valid:false};
+  if (!panel.money&&(value<min||value>max)) return {value:null,error:`Enter a value between ${format(min)} and +${format(max)}.`,valid:false};
+  if (Math.abs(value*100-Math.round(value*100))>0.000001) return {value:null,error:"Use up to two decimal places.",valid:false};
+  return {value:value===0?0:value,error:"",valid:true};
+}
+function plotRange(panel,raw) {
+  let min=panel.min??SETTINGS.min,max=panel.max??SETTINGS.max,tick=panel.tick??SETTINGS.tick;
+  if(panel.money) {
+    const amounts=raw.map(v=>parseAnswer(v,panel)).filter(v=>v.valid).map(v=>Math.abs(v.value));
+    const bound=Math.max(max,...amounts),magnitude=10**Math.floor(Math.log10(bound/2));
+    tick=[1,2,5,10].map(v=>v*magnitude).find(v=>v>=bound/2)||10*magnitude;
+    max=tick*2;min=-max;
+  }
+  return {min,max,tick};
+}
+function rawFor(panel) {
+  const target=state.phase==="revision"?state.revisionDrafts:state.drafts;
+  if (!target[panel.id]) target[panel.id]=state.phase==="revision"?state.first[panel.id].values.map(format):Array(panelWindows(panel).length*panel.series.length).fill("");
+  return target[panel.id];
+}
+function currentSteps(phase=state.phase) { return phase==="revision"?enabledPanels.map(p=>p.id):infoScreens.concat(enabledPanels.map(p=>p.id),["mechanisms","mechanism-explanation","additional-information","revision-choice"]); }
+// Survey progress stays at the current unanswered page while an earlier page is viewed.
+function activePosition() {
+  if(state.phase==="first")return state.index;
+  const firstLength=currentSteps("first").length;
+  if(state.phase==="revision")return firstLength+state.index;
+  return firstLength+(state.revisionRequested?enabledPanels.length:0)+(state.phase==="finished"?1:0);
+}
+function viewPosition() { return state.browseIndex??activePosition(); }
+function viewLocation() {
+  const position=viewPosition(),firstSteps=currentSteps("first");
+  if(position<firstSteps.length)return {phase:"first",index:position,id:firstSteps[position]};
+  const index=position-firstSteps.length,revisionCount=state.revisionRequested?enabledPanels.length:0;
+  if(index<revisionCount)return {phase:"revision",index,id:enabledPanels[index].id};
+  if(index===revisionCount)return {phase:"demographics",index:0,id:"demographics"};
+  return {phase:"finished",index:0,id:"summary"};
+}
+function goBack() {
+  if(viewPosition()===0)return;
+  state.browseIndex=viewPosition()-1;persist();render();
+}
+function returnToCurrent() { state.browseIndex=null;persist();render(); }
+function setNavigation(label,handler,note,disabled=false) {
+  navigation.innerHTML='<p>'+escapeHTML(note||"")+'</p><div class="nav-controls">'+(viewPosition()>0?'<button class="secondary" id="backButton">← Back</button>':"")+(state.browseIndex!==null?'<button class="quiet" id="returnButton">Return to current page</button>':"")+(label?'<button class="primary" id="nextButton">'+escapeHTML(label)+'</button>':"")+'</div>';
+  const next=document.getElementById("nextButton");
+  if(next){next.disabled=disabled;next.addEventListener("click",handler);}
+  document.getElementById("backButton")?.addEventListener("click",goBack);
+  document.getElementById("returnButton")?.addEventListener("click",returnToCurrent);
+}
+function advanceInfo() {
+  if(state.browseIndex!==null){
+    state.browseIndex++;
+    if(state.browseIndex>=activePosition())state.browseIndex=null;
+  } else state.index++;
+  persist();render();
+}
+function render() {
+  if(resizeObserver) resizeObserver.disconnect();
+  screen.replaceChildren();navigation.replaceChildren();
+  document.getElementById("reviewButton").hidden=Object.keys(state.first).length===0;
+  const location=viewLocation();
+  if(location.phase==="finished") {
+    document.getElementById("phaseLabel").textContent="Demo complete";
+    document.getElementById("stepLabel").textContent="First and revised answers preserved";
+    document.getElementById("progressFill").style.width="100%";
+    renderSummary();screen.focus({preventScroll:true});window.scrollTo(0,0);return;
+  }
+  if(location.phase==="demographics") {
+    document.getElementById("phaseLabel").textContent=state.browseIndex!==null?"Reviewing earlier page":"About you";
+    document.getElementById("stepLabel").textContent="Final page";
+    document.getElementById("progressFill").style.width="100%";
+    renderDemographics();screen.focus({preventScroll:true});window.scrollTo(0,0);return;
+  }
+  const steps=currentSteps(location.phase),id=location.id;
+  document.getElementById("phaseLabel").textContent=(state.browseIndex!==null?"Reviewing earlier page · ":"")+(location.phase==="revision"?"Revision round":"First round");
+  document.getElementById("stepLabel").textContent="Page "+(location.index+1)+" of "+steps.length;
+  document.getElementById("progressFill").style.width=((location.index+1)/steps.length*100)+"%";
+  const panel=enabledPanels.find(p=>p.id===id);
+  if(panel) renderPanel(panel);
+  else if(id==="tutorial") renderTutorial();
+  else if(id==="revision-choice") renderRevisionChoice();
+  else if(id==="mechanisms") renderMechanisms();
+  else if(id==="mechanism-explanation") renderMechanismExplanation();
+  else renderInfo(id);
+  screen.focus({preventScroll:true});window.scrollTo(0,0);
+}
 
-<section id="about" class="section">
-  <h2>About</h2>
-  <p>I am a PhD candidate in Economics at the <a href="https://www.nhh.no/en/">Norwegian School of Economics (NHH)</a>, affiliated with <a href="https://www.nhh.no/en/research-centres/fair/">FAIR</a>, the Centre for Experimental Research on Fairness, Inequality and Rationality. I am supervised by Vincent Somville and Nicole Wägner. In Spring 2026, I was a visiting scholar at Cornell University, hosted by Heather Schofield.</p>
-<p>My research fields are development, environmental, and health economics. I study the causes and consequences of physical and mental health in developing contexts, and how they relate to renewable energy expansion, climate change, and labor market decisions. My work combines satellite data, survey data, and field experiments.</p>
-<p>Before my PhD, I earned an MSc in Economics from NHH and an MA in Economics of Education from Central China Normal University.</p>
-<p>I am on the 2026–2027 academic job market.</p>
+function currencyReferenceHTML() {
+  const b=SETTINGS.benchmark;
+  if(Number.isFinite(b.usdPerGhc)&&b.usdPerGhc>0&&b.exchangeRateDate.trim()&&b.exchangeRateSource.trim())return `<p class="small"><strong>USD reference:</strong> GHC 1 = US$ ${b.usdPerGhc.toFixed(4)} (${escapeHTML(b.exchangeRateDate)}; ${escapeHTML(b.exchangeRateSource)}). Enter answers in GHC; USD amounts are shown for reference.</p>`;
+  return '<p class="small muted"><strong>USD conversion pending:</strong> the study team will supply the conversion factor, date and source appropriate to the study period. Enter answers in GHC.</p>';
+}
+function usdDisplay(value) {
+  const b=SETTINGS.benchmark;
+  return Number.isFinite(b.usdPerGhc)&&b.usdPerGhc>0&&b.exchangeRateDate.trim()&&b.exchangeRateSource.trim()?' ≈ US$ '+format(value*b.usdPerGhc):'';
+}
+function benchmarkHTML() {
+  const b=SETTINGS.benchmark;
+  if(Number.isFinite(b.householdConsumption)&&b.householdConsumption>0&&Number.isFinite(b.studyIncome)&&b.studyIncome>=0&&b.source.trim()) {
+    return `<aside class="benchmark"><strong>Consumption benchmark</strong><p>Reference household consumption: GHC ${format(b.householdConsumption)}${usdDisplay(b.householdConsumption)} per ${SETTINGS.consumptionPeriod}. Average study earnings: GHC ${format(b.studyIncome)}${usdDisplay(b.studyIncome)} per ${SETTINGS.consumptionPeriod}, equivalent to ${format(100*b.studyIncome/b.householdConsumption)}% of that consumption benchmark.</p><p class="small muted">${escapeHTML(b.source)}</p>${currencyReferenceHTML()}</aside>`;
+  }
+  return '<aside class="benchmark"><strong>Consumption benchmark · figures pending</strong><p>The study team will add average household consumption and study earnings for the same two-week period, with earnings expressed as a share of household consumption. The numerical examples mentioned in the meeting are not study estimates.</p>'+currencyReferenceHTML()+'</aside>';
+}
+function implementationHTML() {
+  return `<h2>What happened in practice?</h2><p>Income paths broadly followed the assigned schedules, with little evidence that study work displaced other earnings and no substantial differences in this crowd-out across arms. Average income was similar across the treatment arms; income varied more over time in Predictable and Risky than in Stable.</p><details><summary>More about implementation and income</summary><p>This qualitative summary follows the PI discussion. The study team still needs to verify the final wording against the results and supply the supporting compliance, income and crowding-out figures. No exact percentage or amount is asserted here.</p><p>Stable and Predictable each offered 54 bags over six periods. Risky offered 54 bags in expectation; its realized total could differ. These are assigned-work totals, not actual earnings.</p>${benchmarkHTML()}</details>`;
+}
+function renderInfo(id) {
+  if(id==="additional-information") {
+    screen.innerHTML=`<div class="kicker">Before you consider revising</div><h1>Additional information</h1><p class="lead">Your first predictions are locked. Read the information below before deciding whether to revise them.</p><div id="additionalInformation" class="prose"></div>`;
+    const content=document.getElementById("additionalInformation");
+    if(SETTINGS.additionalInformation.trim()) {
+      const paragraph=document.createElement("p");paragraph.style.whiteSpace="pre-line";paragraph.textContent=SETTINGS.additionalInformation;content.append(paragraph);
+    } else {
+      content.innerHTML='<div class="draft-note"><strong>Review placeholder.</strong> The October 19 discussion did not specify the information to disclose before revisions. No new study evidence is shown here. Continue to test the revision process.</div>';
+    }
+    setNavigation("Continue to revision decision →",()=>{if(state.browseIndex===null&&!state.informationSeenAt)state.informationSeenAt=new Date().toISOString();advanceInfo();},"First answers stay locked. Revisions are saved separately.");
+  }
+  if(id==="welcome") {
+    screen.innerHTML=`<div class="kicker">About the study</div><h1>Predictions about a work programme in northern Ghana</h1><p class="lead">Predict how three work schedules affect mental health and household consumption.</p><ul class="study-facts"><li><strong>Who and where:</strong> 2,272 women in northern Ghana during the lean season, when little work is available.</li><li><strong>The work:</strong> Stitching bags at home, with flexible hours; roughly two hours per bag. Payment per bag is constant across treatment arms.</li><li><strong>Assignment:</strong> Random assignment to Control or one of three work schedules.</li></ul><div class="grid-wrap"><table class="design-table"><caption>Compare the four study arms</caption><thead><tr><th scope="col">Arm</th><th scope="col">Bags per period</th><th scope="col">What is known in advance?</th></tr></thead><tbody><tr><th scope="row">Control</th><td>No study work</td><td>Surveyed throughout the study</td></tr><tr><th scope="row">Stable</th><td>9 every period</td><td>The whole schedule</td></tr><tr><th scope="row">Predictable</th><td>3 in three periods; 15 in three periods</td><td>The whole schedule</td></tr><tr><th scope="row">Risky</th><td>3 or 15 each period, with equal probability</td><td>Only the current period, revealed at its start</td></tr></tbody></table></div><p class="small">The treatment arms offer the same expected total work and earnings. Risky participants’ realized totals can differ.</p>${implementationHTML()}<details><summary>More about the work schedules</summary><p>Stable and Predictable schedules were explained at the beginning, with comprehension questions. In Risky, participants scratched a scratchcard at the start of each period to reveal the work assignment.</p></details><details><summary>Study information and draft consent text</summary><p><strong>Grant:</strong> 1R01AG076655-01<br><strong>Authors:</strong> Heather Schofield, Vincent Somville, Leandro Carvalho, Damien de Walque, Jingyao Wei, and Nicholas Grandstaff<br><strong>Corresponding author:</strong> Heather Schofield; hws44@cornell.edu</p><p>The supplied study introduction states that the study has IRB approval from Ghana Health Services, the National Institute of Health, the Norwegian School of Economics, Cornell University, the University of Pennsylvania, the University of Southern California, and the World Bank. It describes minimal risks, compensation for participants' time, informed consent before enrollment, and de-identified personal information stored securely.</p><p>The draft survey takes about ten minutes. Predictions will be analyzed as part of an academic project. The draft describes anonymous responses and the option to withdraw by exiting before the end of the survey.</p><p><strong>In this demonstration, continuing only starts the demo; no research consent or response is submitted.</strong></p></details>`;
+    setNavigation("Continue →",advanceInfo,"Next: study timing, then a short practice exercise.");
+  }
+  if(id==="instructions") {
+    screen.innerHTML=`<div class="kicker">Timing and predictions</div><h1>Six periods, three reference windows</h1><ul class="study-facts"><li><strong>Duration:</strong> Three months, divided into six two-week periods.</li><li><strong>Data collection:</strong> Every two weeks; baseline and endline in person, other surveys by phone.</li></ul><p>Effects may vary over time as people anticipate future income and experience past income changes. We therefore ask for predictions over different time horizons.</p><div class="window-explain"><div><strong>1–2</strong><span>First four weeks</span></div><div><strong>1–4</strong><span>First eight weeks</span></div><div><strong>1–6</strong><span>All twelve weeks</span></div></div><p><strong>The windows are cumulative.</strong> These windows follow the analysis structure of the study and show how effects develop over time. Each estimate uses observations from all periods in that window. Periods 1–4 include 1–2; 1–6 include all six periods. Do not add the coefficients or sum spending across periods.</p><p>First predict mental health, then consumption, for the same treatment–Control comparisons. Next compare consumption in high- and low-work periods and explain the reasons behind your predictions.</p><details><summary>Using the interface and revisiting answers</summary><p>Drag markers or type in the table. Mental health uses standard deviations, from −0.50 to +0.50. Consumption uses Ghana cedis (GHC) per household per two-week period. Currency graph limits are provisional and expand to fit typed amounts.</p><p>Hollow markers are unanswered. Explicitly enter zero if you expect no difference. First answers lock when you continue. Back lets you reread pages and view locked answers; the optional revision round records separate numerical predictions. Mechanism responses are collected once before additional information.</p><p>The additional-information step is retained for review; its content is still pending.</p></details>`;
+    setNavigation("Try the practice exercise →",advanceInfo,"Practice with fictional examples before making your first prediction.");
+  }
+}
+function svgElement(tag,attrs,parent,text) {
+  const node=document.createElementNS("http://www.w3.org/2000/svg",tag);
+  for(const [key,value] of Object.entries(attrs||{})) node.setAttribute(key,value);
+  if(text!==undefined) node.textContent=text;
+  parent.appendChild(node);return node;
+}
+function drawShape(parent,series,x,y,fill) {
+  const attrs={fill,stroke:series.stroke,"stroke-width":2};
+  if(series.shape==="circle") return svgElement("circle",{...attrs,cx:x,cy:y,r:7},parent);
+  if(series.shape==="square") return svgElement("rect",{...attrs,x:x-7,y:y-7,width:14,height:14},parent);
+  if(series.shape==="triangle") return svgElement("polygon",{...attrs,points:`${x},${y-9} ${x-9},${y+7} ${x+9},${y+7}`},parent);
+  return svgElement("polygon",{...attrs,points:`${x},${y-9} ${x-8},${y} ${x},${y+9} ${x+8},${y}`},parent);
+}
+function drawLegend(target,series) {
+  target.replaceChildren();
+  series.forEach(item=>{const span=document.createElement("span");const icon=svgElement("svg",{viewBox:"0 0 24 24","aria-hidden":"true"},span);drawShape(icon,item,12,12,item.fill);span.append(document.createTextNode(item.label));target.append(span);});
+}
+function drawPlot(target,panel,raw,interactive,onChange) {
+  target.replaceChildren();
+  const width=Math.max(240,target.clientWidth),height=370,left=Math.min(210,Math.max(88,width*.24)),right=width,top=70,bottom=335;
+  const container=target.parentElement,compact=width<560;
+  const selected=Number(container.querySelector('#plotSeries').value);
+  container.classList.toggle('is-compact',compact);
+  container.style.setProperty("--comparison-width",left+"px");
+  container.querySelectorAll('.estimate-table tbody tr').forEach((row,i)=>row.classList.toggle('graph-selected',compact&&i===selected));
+  drawLegend(document.getElementById('predictionLegend'),compact?[panel.series[selected]]:panel.series);
+  const {min,max,tick}=plotRange(panel,raw);
+  const windows=panelWindows(panel);
+  const y=value=>bottom-(value-min)/(max-min)*(bottom-top);
+  const svg=svgElement("svg",{viewBox:`0 0 ${width} ${height}`,role:"group","aria-label":panel.section||panel.title||"Assigned study income"},target);
+  if(panel.unit&&!compact) svgElement("text",{transform:`translate(${left-68} ${(top+bottom)/2}) rotate(-90)`,"text-anchor":"middle","font-size":11,fill:"#596b79"},svg,panel.unit);
+  for(let i=0;min+i*tick<=max+0.000001;i++) {
+    const value=min+i*tick;
+    svgElement("line",{x1:left,x2:right,y1:y(value),y2:y(value),stroke:Math.abs(value)<0.000001?"#788895":"#e4e8ec","stroke-width":Math.abs(value)<0.000001?1.5:1},svg);
+    svgElement("text",{x:left-9,y:y(value)+4,"text-anchor":"end","font-size":12,fill:"#596b79"},svg,max>2?String(Math.round(value)):format(value));
+  }
+  const groupWidth=(right-left)/windows.length;
+  windows.forEach((window,r)=>{
+    const x=left+(r+.5)*groupWidth;
+    svgElement("text",{x,y:48,"text-anchor":"middle","font-size":14,fill:"#344e62"},svg,window);
+  });
+  svgElement("text",{x:(left+right)/2,y:22,"text-anchor":"middle","font-size":13,fill:"#344e62"},svg,panel.windowHeading||"Cumulative periods");
+  const nodes=[];
+  raw.forEach((value,i)=>{
+    const r=Math.floor(i/panel.series.length),s=i%panel.series.length,series=panel.series[s];
+    if(compact&&s!==selected)return;
+    const spacing=Math.min(width<500?22:32,(groupWidth-8)/panel.series.length);
+    const x=left+(r+.5)*groupWidth+(compact?0:(s-(panel.series.length-1)/2)*spacing);
+    const label=`Periods ${windows[r]}, ${series.label}`;
+    const group=svgElement("g",interactive?{class:"handle",tabindex:0,role:"slider","aria-label":label,"aria-orientation":"vertical","aria-valuemin":min,"aria-valuemax":max}:{role:"img","aria-label":label},svg);
+    const title=svgElement("title",{},group,label);
+    const hitWidth=compact?44:spacing;
+    if(interactive) svgElement("rect",{x:-hitWidth/2,y:-22,width:hitWidth,height:44,rx:4,fill:"transparent",class:"hit"},group);
+    const symbol=drawShape(group,series,0,0,series.fill);
+    if(compact)symbol.setAttribute('transform','scale(1.3)');
+    nodes[i]={group,symbol,title,x,label,series};
+    if(!interactive) return;
+    let drag=null;
+    function pointValue(event) { const point=svg.createSVGPoint();point.x=event.clientX;point.y=event.clientY;const local=point.matrixTransform(svg.getScreenCTM().inverse());return min+(bottom-local.y)/(bottom-top)*(max-min); }
+    function setValue(value) { onChange(i,value===null?"":format(Math.max(min,Math.min(max,Math.round(value*100)/100))),"marker"); }
+    group.addEventListener("pointerdown",event=>{if(event.button!==0)return;event.preventDefault();group.focus();group.setPointerCapture(event.pointerId);const answer=parseAnswer(raw[i],panel);drag={id:event.pointerId,start:pointValue(event),value:answer.valid?answer.value:0};setValue(drag.value);});
+    group.addEventListener("pointermove",event=>{if(drag&&drag.id===event.pointerId)setValue(drag.value+pointValue(event)-drag.start);});
+    ["pointerup","pointercancel","lostpointercapture"].forEach(type=>group.addEventListener(type,event=>{if(drag&&drag.id===event.pointerId)drag=null;}));
+    group.addEventListener("keydown",event=>{
+      const parsed=parseAnswer(raw[i],panel);let value=parsed.valid?parsed.value:0;const step=(panel.step??SETTINGS.step)*(event.shiftKey?10:1);
+      if(event.key==="ArrowUp"||event.key==="ArrowRight")value+=step;
+      else if(event.key==="ArrowDown"||event.key==="ArrowLeft")value-=step;
+      else if(event.key==="Home")value=min;
+      else if(event.key==="End")value=max;
+      else if(event.key==="Delete"||event.key==="Backspace")value=null;
+      else if(event.key!=="Enter"&&event.key!==" ")return;
+      event.preventDefault();setValue(value);
+    });
+  });
+  function refresh() {
+    nodes.forEach((node,i)=>{
+      const parsed=interactive?parseAnswer(raw[i],panel):{valid:raw[i]!==null,value:raw[i]};
+      const value=parsed.valid?parsed.value:0;
+      node.group.setAttribute("transform",`translate(${node.x},${y(value)})`);
+      node.symbol.setAttribute("fill",parsed.valid?node.series.fill:"white");
+      node.symbol.setAttribute("stroke-dasharray",parsed.valid?"none":"3 2");
+      node.group.setAttribute("aria-valuenow",value);
+      node.group.setAttribute("aria-valuetext",parsed.valid?(max>2?String(value):format(value)):"Not answered; starting position zero");
+      node.title.textContent=node.label+": "+(parsed.valid?(max>2?String(value):format(value)):"not answered");
+    });
+  }
+  refresh();return refresh;
+}
+function tableHTML(panel,values,editable,prefix) {
+  const series=panel.series,windows=panelWindows(panel);
+  let html='<table class="estimate-table"><colgroup><col class="comparison-column">'+windows.map(()=>'<col>').join('')+'</colgroup><thead><tr><th scope="col" rowspan="2"><span class="sr-only">Comparison</span></th><th scope="colgroup" colspan="'+windows.length+'">'+escapeHTML(panel.windowHeading||"Cumulative periods")+'</th></tr><tr>'+windows.map(window=>'<th scope="col">'+window+'</th>').join("")+'</tr></thead><tbody>';
+  series.forEach((s,c)=>{
+    html+='<tr><th scope="row"><span class="row-comparison">'+shapeHTML(s)+'<span>'+escapeHTML(s.label)+'</span></span></th>';
+    windows.forEach((window,r)=>{
+      const i=r*series.length+c;
+      html+='<td>'+(editable?'<input class="estimate" type="text" inputmode="decimal" autocomplete="off" id="'+prefix+'_'+i+'" data-cell="'+i+'" value="'+escapeHTML(values[i])+'" aria-label="Periods '+window+', '+escapeHTML(s.label)+'" aria-describedby="entryHelp"><button type="button" class="sign-toggle" data-sign-cell="'+i+'" aria-label="Change sign: Periods '+window+', '+escapeHTML(s.label)+'" title="Change positive to negative or negative to positive">±</button>':(values[i]===null?'—':escapeHTML(format(values[i]))))+(panel.money?'<small class="usd-reference" data-usd-cell="'+i+'">'+(parseAnswer(values[i],panel).valid?escapeHTML(usdDisplay(Number(values[i]))):'')+'</small>':'')+'</td>';
+    });html+='</tr>';
+  });return html+'</tbody></table>';
+}
+function shapeHTML(series) {
+  const wrapper=document.createElement("span");
+  const svg=svgElement("svg",{viewBox:"0 0 24 24","aria-hidden":"true"},wrapper);
+  drawShape(svg,series,12,12,series.fill);return wrapper.innerHTML;
+}
+function entryHelpHTML(panel=PRACTICE_PANEL) {
+  const instruction=panel.money?'Enter a difference in GHC, or drag a marker. The graph expands to fit typed amounts.':'Drag a marker or enter a number from −0.50 to +0.50.';
+  return '<p id="entryHelp" class="plot-help">'+instruction+' Hollow markers are unanswered. Click a marker at zero to confirm zero.<br><span class="keyboard-help">Keyboard: arrows adjust, Enter confirms, Delete clears. You can type up to two decimal places.</span></p>';
+}
+function answerInterfaceHTML(panel,raw,editable=true) {
+  return `<div class="prediction-interface"><h1 class="plot-title">${escapeHTML(panel.section||panel.title)}</h1><div class="graph-picker"><label for="plotSeries">Comparison shown in the graph</label><select id="plotSeries">${panel.series.map((s,i)=>`<option value="${i}">${escapeHTML(s.label)}</option>`).join('')}</select><p>Choose a comparison to view its markers. All comparisons remain in the table below.</p></div><p class="plot-unit">${escapeHTML(panel.unit)}</p><div id="predictionPlot" class="plot"></div><div id="predictionLegend" class="legend"></div>${editable?'<p class="phone-entry-help">To enter a negative number, type the amount and tap ± below its box. Tap ± again to make it positive.</p>':''}<div class="grid-wrap">${tableHTML(panel,raw,editable,panel.id)}</div></div>${editable?'<p id="answerStatus" class="answer-status" role="status" aria-live="polite"></p>':""}`;
+}
+function panelContextHTML(panel) {
+  const definition=panel.section==="Mental health"?'<details class="outcome-definition"'+(panel.id==="MH_slider_2"?' open':'')+'><summary>About the mental-health measure</summary><p>'+escapeHTML(SETTINGS.mentalHealthDefinition)+'</p><p class="small muted">'+escapeHTML(SETTINGS.mentalHealthPending)+'</p></details>':"";
+  return (panel.money?benchmarkHTML()+'<details><summary>Review notes on the consumption measure and graph</summary><p>The household total and two-week unit are a working specification to align with study periods. Confirm the consumption recall period and denominator. The initial −100 to +100 GHC display is a demo setting, not a study benchmark or an agreed response limit. Typed amounts expand the graph.</p></details>':"")+(panel.context?'<p class="comparison-definition">'+escapeHTML(panel.context)+'</p>':"")+definition;
+}
+function interpretationHTML(panel) {
+  return `<details class="interpretation"><summary>How to interpret this prediction${panel.draft?' · Proposed comparison':""}</summary><p>${escapeHTML(panel.explanation)}</p>${panel.draft?'<div class="draft-note">'+escapeHTML(panel.draftNote)+'</div>':""}</details>`;
+}
+function mountAnswerInterface(panel,raw,onUpdate) {
+  // DOM rows are comparisons; response arrays remain indexed by window then comparison.
+  const inputs=Array.from(screen.querySelectorAll(".estimate")).sort((a,b)=>Number(a.dataset.cell)-Number(b.dataset.cell));
+  let refreshPlot;
+  function update(index,value,source) {
+    if(index!==undefined){raw[index]=value;inputs[index].value=value;}
+    let answered=0,firstError="";
+    inputs.forEach((input,i)=>{const parsed=parseAnswer(raw[i],panel);if(parsed.valid)answered++;if(parsed.error&&!firstError)firstError=`Periods ${panelWindows(panel)[Math.floor(i/panel.series.length)]}, ${panel.series[i%panel.series.length].short}: ${parsed.error}`;input.setAttribute("aria-invalid",parsed.error?"true":"false");input.setCustomValidity(parsed.error);});
+    screen.querySelectorAll('[data-sign-cell]').forEach(button=>{const parsed=parseAnswer(raw[Number(button.dataset.signCell)],panel);button.disabled=!parsed.valid||parsed.value===0;});
+    if(panel.money)screen.querySelectorAll("[data-usd-cell]").forEach(label=>{const parsed=parseAnswer(raw[Number(label.dataset.usdCell)],panel);label.textContent=parsed.valid?usdDisplay(parsed.value):"";});
+    const status=document.getElementById("answerStatus");
+    status.className="answer-status"+(firstError?" error":"");
+    status.textContent=firstError;
+    if(panel.money&&source!=="marker")redraw();
+    else if(refreshPlot)refreshPlot();
+    onUpdate({index,value,source,complete:answered===raw.length&&!firstError});persist();
+  }
+  inputs.forEach((input,i)=>{input.addEventListener("input",()=>update(i,input.value,"box"));input.addEventListener("blur",()=>{const parsed=parseAnswer(input.value,panel);if(parsed.valid)update(i,format(parsed.value),"format");});});
+  const target=document.getElementById("predictionPlot");
+  const picker=document.getElementById('plotSeries');
+  function redraw(){refreshPlot=drawPlot(target,panel,raw,true,update);}
+  function showComparison(index){const selected=String(index%panel.series.length);if(picker.value!==selected){picker.value=selected;redraw();}}
+  picker.addEventListener('change',redraw);
+  inputs.forEach((input,i)=>input.addEventListener('focus',()=>showComparison(i)));
+  screen.querySelectorAll('[data-sign-cell]').forEach(button=>button.addEventListener('click',()=>{const i=Number(button.dataset.signCell),parsed=parseAnswer(raw[i],panel);if(parsed.valid){showComparison(i);update(i,format(-parsed.value),'box');}}));
+  redraw();update();
+  resizeObserver=new ResizeObserver(redraw);resizeObserver.observe(target);
+}
+function predictionTag(panel) {
+  return `Part ${panel.section==="Mental health"?1:2} · ${panel.section} · Prediction ${enabledPanels.indexOf(panel)+1}`;
+}
+function proposalBadgeHTML(panel) {
+  const label=panel.proposalVersion?`Proposal · Version ${panel.proposalVersion} · ${panel.proposalLabel}${panel.preferredBy?" · "+panel.preferredBy+" preference":""}`:panel.draft?`Proposed comparison · ${panel.title}`:"";
+  return label?`<div class="draft-tag proposal-label">${escapeHTML(label)}</div>`:"";
+}
+function renderPanel(panel) {
+  const phase=viewLocation().phase,saved=(phase==="revision"?state.revised:state.first)[panel.id];
+  if(saved){renderLockedPanel(panel,saved,phase);return;}
+  const revising=state.phase==="revision",raw=rawFor(panel);
+  screen.innerHTML=`<div class="kicker">${escapeHTML(predictionTag(panel))}</div>${proposalBadgeHTML(panel)}<p class="prediction-question"><strong>${escapeHTML(panel.description)}</strong></p>${panelContextHTML(panel)}${entryHelpHTML(panel)}${answerInterfaceHTML(panel,raw)}${interpretationHTML(panel)}${revising?'<p class="small muted">Your first answers are preserved. Change only the predictions you wish to revise; all other values carry forward.</p>':""}`;
+  setNavigation(revising?"Save revision & continue →":"Lock answers & continue →",()=>commitPanel(panel),revising?"This saves a separate second answer for this page.":"Enter every estimate, including zeros, before continuing. Continuing locks this page until the optional revision round.",true);
+  mountAnswerInterface(panel,raw,({complete})=>{document.getElementById("nextButton").disabled=!complete;});
+}
+function renderLockedPanel(panel,saved,phase) {
+  const revised=phase==="revision";
+  screen.innerHTML=`<div class="kicker">${escapeHTML(predictionTag(panel))}</div>${proposalBadgeHTML(panel)}<p class="locked-note" role="status"><strong>Answers locked · read-only.</strong> ${revised?"These are your saved revised answers.":"These are your saved first answers."} Going back does not unlock this page.</p><p class="prediction-question"><strong>${escapeHTML(panel.description)}</strong></p>${panelContextHTML(panel)}${answerInterfaceHTML(panel,saved.values,false)}${interpretationHTML(panel)}`;
+  setNavigation("Continue →",advanceInfo,"You can review earlier pages. Your locked answers remain unchanged.");
+  const target=document.getElementById("predictionPlot");
+  function redraw(){drawPlot(target,panel,saved.values,false,()=>{});}
+  document.getElementById('plotSeries').addEventListener('change',redraw);
+  redraw();
+  resizeObserver=new ResizeObserver(redraw);resizeObserver.observe(target);
+}
+function renderTutorial() {
+  const practice=state.practice;
+  screen.innerHTML=`<div class="kicker">Practice · not a survey prediction</div><p class="prediction-question"><strong>Try the graph and the answer boxes before making your predictions.</strong></p><p class="small muted">These fictional examples teach the controls. The practice numbers are not suggested treatment effects and are not included in your answers.</p><ol id="practiceTasks" class="practice-tasks" aria-live="polite"></ol>${entryHelpHTML()}${answerInterfaceHTML(PRACTICE_PANEL,practice.values)}<p class="small muted">The graph and table update together. Complete the three steps above; you can leave the other boxes blank.</p>`;
+  if(practice.completedAt)screen.insertAdjacentHTML("afterbegin",'<p class="locked-note">You have already completed the tutorial. You can practice again or continue. Your survey answers will stay unchanged.</p>');
+  setNavigation(practice.completedAt?"Continue →":"Start my predictions →",()=>{
+    if(!practice.completedAt&&!practice.tasks.every(Boolean))return;
+    state.practice={values:Array(9).fill(""),tasks:[false,false,false],completedAt:practice.completedAt||new Date().toISOString()};
+    advanceInfo();
+  },practice.completedAt?"Practice is separate from your survey answers. You do not need to repeat it to continue.":"Practice entries are discarded. Your real prediction page starts blank.",true);
+  const tasks=["Move the Example A marker for Periods 1–2 away from zero. Drag it, or select it and use an arrow key.","Enter 0.25 in the Example B box for Periods 1–4.","Confirm zero for Example C in Periods 1–6: click its hollow marker at zero, or select it and press Enter. If you moved it, first return it to zero."];
+  mountAnswerInterface(PRACTICE_PANEL,practice.values,({index,value,source})=>{
+    const parsed=parseAnswer(value??"");
+    if(parsed.valid){
+      if(index===0&&source==="marker"&&parsed.value!==0)practice.tasks[0]=true;
+      if(index===4&&source==="box"&&parsed.value===0.25)practice.tasks[1]=true;
+      if(index===8&&source==="marker"&&parsed.value===0)practice.tasks[2]=true;
+    }
+    document.getElementById("practiceTasks").innerHTML=tasks.map((task,i)=>`<li class="${practice.tasks[i]?"done":""}">${practice.tasks[i]?'<strong>Done.</strong> ':""}${task}</li>`).join("");
+    document.getElementById("nextButton").disabled=!practice.completedAt&&!practice.tasks.every(Boolean);
+  });
+}
+function commitPanel(panel) {
+  // Navigation back must never resubmit or overwrite either saved round.
+  if(state.browseIndex!==null||(state.phase==="revision"?state.revised:state.first)[panel.id])return;
+  const raw=rawFor(panel),parsed=raw.map(value=>parseAnswer(value,panel));
+  if(parsed.some(value=>!value.valid))return;
+  const record={values:parsed.map(value=>value.value),savedAt:new Date().toISOString()};
+  if(state.phase==="revision")state.revised[panel.id]=record;
+  else if(!state.first[panel.id])state.first[panel.id]=record;
+  state.index++;
+  if(state.phase==="revision"&&state.index>=enabledPanels.length)state.phase="demographics";
+  persist();render();
+}
 
-</section>
+function mechanismSummaryHTML() {
+  if(!state.mechanisms)return "";
+  const m=state.mechanisms;
+  return '<section class="summary-card"><h2>Reasons behind your predictions</h2><ul>'+MECHANISMS.map(item=>'<li>'+escapeHTML(item.label)+': <strong>'+escapeHTML(RATINGS[Number(m.ratings[item.id])])+'</strong></li>').join('')+(m.other?'<li>Other: '+escapeHTML(m.other)+' — <strong>'+escapeHTML(RATINGS[Number(m.otherRating)])+'</strong></li>':'')+'</ul>'+(state.mechanismExplanationSavedAt?m.selected.map(id=>'<h3>'+escapeHTML(id==='other'?m.other:MECHANISMS.find(item=>item.id===id).label)+'</h3><p class="written-answer">'+escapeHTML(m.details[id])+'</p>').join(''):'')+'</section>';
+}
+function renderMechanisms() {
+  if(state.mechanisms) {
+    screen.innerHTML='<div class="kicker">Part 3 · Reasons behind your predictions</div><h1>Your importance ratings</h1><p class="locked-note">Answers locked · read-only.</p>'+mechanismSummaryHTML();
+    setNavigation("Continue →",advanceInfo,"Your saved ratings remain unchanged.");return;
+  }
+  const m=state.mechanismDraft;
+  screen.innerHTML='<div class="kicker">Part 3 · Reasons behind your predictions</div><h1>How important is each reason to your predictions?</h1><div class="draft-tag">Proposal · Mechanism questions · Version 1</div><p>Think about why you expect mental health and consumption to differ across the study arms. Rate each reason independently; you do not need to rank them or use every rating.</p><p class="small muted">Review draft: the PI meeting supported this format. The list and wording of reasons still need review.</p><div class="grid-wrap"><table class="mechanism-matrix"><thead><tr><th scope="col">Possible reason</th>'+RATINGS.map(label=>'<th scope="col">'+label+'</th>').join('')+'</tr></thead><tbody>'+MECHANISMS.map(item=>'<tr><th scope="row">'+escapeHTML(item.label)+'</th>'+RATINGS.map((label,i)=>'<td><label><input type="radio" name="'+item.id+'" value="'+i+'" aria-label="'+escapeHTML(item.label)+': '+label+'" '+(m.ratings[item.id]===String(i)?'checked':'')+'><span class="mobile-rating">'+label+'</span></label></td>').join('')+'</tr>').join('')+'</tbody></table></div><label class="field-label" for="otherMechanism">Another reason (optional)</label><input id="otherMechanism" class="text-field" type="text" value="'+escapeHTML(m.other)+'" placeholder="Add a reason that is missing above"><label class="field-label" for="otherRating">Importance of your additional reason</label><select id="otherRating"><option value="">Choose if you added a reason</option>'+RATINGS.map((label,i)=>'<option value="'+i+'" '+(m.otherRating===String(i)?'selected':'')+'>'+label+'</option>').join('')+'</select><p id="mechanismStatus" class="answer-status" role="status"></p>';
+  const complete=()=>MECHANISMS.every(item=>Object.hasOwn(m.ratings,item.id))&&(!m.other.trim()||m.otherRating!=="");
+  setNavigation("Lock ratings & continue →",()=>{
+    if(!complete()||state.browseIndex!==null)return;
+    state.mechanisms={ratings:{...m.ratings},other:m.other.trim(),otherRating:m.other.trim()?m.otherRating:"",selected:[],details:{},savedAt:new Date().toISOString()};advanceInfo();
+  },"Rate each listed reason. You can choose Unsure. An additional reason is optional.",!complete());
+  const update=()=>{document.getElementById("nextButton").disabled=!complete();document.getElementById("mechanismStatus").textContent=m.other.trim()&&!m.otherRating?"Choose the importance of your additional reason.":"";persist();};
+  screen.querySelectorAll('input[type="radio"]').forEach(input=>input.addEventListener("change",()=>{m.ratings[input.name]=input.value;update();}));
+  document.getElementById("otherMechanism").addEventListener("input",event=>{m.other=event.target.value;update();});
+  document.getElementById("otherRating").addEventListener("change",event=>{m.otherRating=event.target.value;update();});
+}
+function renderMechanismExplanation() {
+  const saved=!!state.mechanismExplanationSavedAt;
+  const m=state.mechanismDraft,options=MECHANISMS.concat(state.mechanisms.other?[{id:'other',label:state.mechanisms.other}]:[]);
+  screen.innerHTML='<div class="kicker">Part 3 · Reasons behind your predictions</div><h1>Tell us how the most important reasons matter</h1>'+(saved?'<p class="locked-note">Answer locked · read-only.</p>'+mechanismSummaryHTML():mechanismSummaryHTML()+'<fieldset><legend>Select two or three reasons to explain</legend>'+options.map(item=>'<label class="reason-choice"><input type="checkbox" value="'+item.id+'" '+(m.selected.includes(item.id)?'checked':'')+'> '+escapeHTML(item.label)+'</label>').join('')+'</fieldset><p class="small">For each selected reason, write two or three sentences (at least 20 words) explaining how it affects your predictions. If uncertain, explain what you are uncertain about.</p><div id="reasonDetails"></div><p id="explanationStatus" class="answer-status" role="status"></p>');
+  if(saved){setNavigation("Continue →",advanceInfo,"Your explanation remains unchanged.");return;}
+  const wordCount=text=>text.trim()?text.trim().split(/\s+/).length:0;
+  const complete=()=>m.selected.length>=2&&m.selected.length<=3&&m.selected.every(id=>wordCount(m.details[id]||'')>=20);
+  const update=()=>{document.getElementById('nextButton').disabled=!complete();screen.querySelectorAll('input[type="checkbox"]').forEach(input=>{input.disabled=m.selected.length>=3&&!input.checked;});document.getElementById('explanationStatus').textContent=m.selected.length<2?'Select at least two reasons.':m.selected.map(id=>options.find(item=>item.id===id).label+': '+wordCount(m.details[id]||'')+' words').join(' · ');persist();};
+  const fields=()=>{document.getElementById('reasonDetails').innerHTML=m.selected.map(id=>'<label class="field-label" for="detail_'+id+'">'+escapeHTML(options.find(item=>item.id===id).label)+'</label><textarea id="detail_'+id+'" data-reason="'+id+'" rows="4">'+escapeHTML(m.details[id]||'')+'</textarea>').join('');screen.querySelectorAll('textarea').forEach(input=>input.addEventListener('input',()=>{m.details[input.dataset.reason]=input.value;update();}));update();};
+  setNavigation("Lock explanations & continue →",()=>{
+    if(!complete()||state.browseIndex!==null)return;
+    state.mechanisms.selected=[...m.selected];state.mechanisms.details=Object.fromEntries(m.selected.map(id=>[id,m.details[id].trim()]));state.mechanismExplanationSavedAt=new Date().toISOString();advanceInfo();
+  },"Your explanations are saved with your first predictions.",!complete());
+  screen.querySelectorAll('input[type="checkbox"]').forEach(input=>input.addEventListener('change',()=>{m.selected=input.checked?m.selected.concat(input.value):m.selected.filter(id=>id!==input.value);fields();}));fields();
+}
+function renderRevisionChoice() {
+  if(state.revisionRequested!==null){
+    screen.innerHTML=`<div class="kicker">Review your predictions</div><h1>Your revision decision</h1><p class="locked-note"><strong>Decision saved · read-only.</strong></p><p class="lead">${state.revisionRequested?"You chose to revise your answers.":"You chose to keep your first answers."}</p><p>Your first answers remain locked. Going back does not change this decision or start another revision round.</p>`;
+    setNavigation("Continue →",advanceInfo,"Your saved revision decision remains unchanged.");return;
+  }
+  screen.innerHTML=`<div class="kicker">Review your predictions</div><h1>Would you like to revise your first answers?</h1><p class="lead">Your first predictions are locked and saved separately.</p><p>You can inspect them using “First answers” above. Revising reopens the three numerical prediction pages with your existing values. Your mechanism ratings and explanation remain part of your first response.</p><div class="choice-list"><label class="choice"><input type="radio" name="revise" value="yes"><div><strong>Yes, I would like to revise</strong><span>Keep my first answers and record a second set separately.</span></div></label><label class="choice"><input type="radio" name="revise" value="no"><div><strong>No, keep my first answers</strong><span>Finish with my first answers.</span></div></label></div><p class="choices-foot">If the preceding information page was marked pending, no new study evidence has been shown. This is a test of the revision flow only.</p>`;
+  setNavigation("Continue →",()=>{
+    const selected=screen.querySelector('input[name="revise"]:checked');if(!selected)return;
+    state.revisionRequested=selected.value==="yes";state.revisionChoiceAt=new Date().toISOString();
+    state.phase=state.revisionRequested?"revision":"demographics";state.index=0;
+    persist();render();
+  },"The revision decision is stored with your first and second answers.",!state.revisionSelection);
+  screen.querySelectorAll('input[name="revise"]').forEach(input=>{
+    input.checked=input.value===state.revisionSelection;
+    input.addEventListener("change",()=>{state.revisionSelection=input.value;persist();document.getElementById("nextButton").disabled=false;});
+  });
+}
 
+function demographicSummaryHTML() {
+  if(!state.demographics)return "";
+  return '<section class="summary-card"><h2>About you</h2><ul>'+['age','country','discipline','title'].map(key=>'<li>'+({age:'Age',country:'Country of residence',discipline:'Primary discipline',title:'Professional title or role'}[key])+': '+escapeHTML(state.demographics[key]||'Not provided')+'</li>').join('')+'</ul></section>';
+}
+function renderDemographics() {
+  if(state.demographics){screen.innerHTML='<div class="kicker">Part 4 · About you</div><h1>Your background</h1><p class="locked-note">Answers saved · read-only.</p>'+demographicSummaryHTML();setNavigation('Continue →',advanceInfo,'Your saved background responses remain unchanged.');return;}
+  const d=state.demographicDraft;
+  screen.innerHTML='<div class="kicker">Part 4 · About you</div><h1>A little about your background</h1><p>These questions help describe who contributed predictions. All four are optional; leave any blank if you prefer not to answer.</p><label class="field-label" for="demoAge">Age (years)</label><input class="text-field" id="demoAge" inputmode="numeric" type="text" autocomplete="off" value="'+escapeHTML(d.age)+'"><label class="field-label" for="demoCountry">Country of residence</label><input class="text-field" id="demoCountry" type="text" value="'+escapeHTML(d.country)+'"><label class="field-label" for="demoDiscipline">Primary discipline or field</label><input class="text-field" id="demoDiscipline" type="text" value="'+escapeHTML(d.discipline)+'"><label class="field-label" for="demoTitle">Professional title or role</label><input class="text-field" id="demoTitle" type="text" value="'+escapeHTML(d.title)+'"><p id="demographicStatus" class="answer-status" role="status"></p>';
+  const valid=()=>!d.age.trim()||(/^\d{1,3}$/.test(d.age.trim())&&Number(d.age)>=1&&Number(d.age)<=120);
+  setNavigation('Finish demo →',()=>{
+    if(!valid()||state.browseIndex!==null)return;
+    state.demographics={...Object.fromEntries(Object.entries(d).map(([key,value])=>[key,value.trim()])),savedAt:new Date().toISOString()};state.phase='finished';state.finishedAt=new Date().toISOString();persist();render();
+  },'You may finish with all fields blank.',!valid());
+  for(const [id,key] of [['demoAge','age'],['demoCountry','country'],['demoDiscipline','discipline'],['demoTitle','title']])document.getElementById(id).addEventListener('input',event=>{d[key]=event.target.value;const ok=valid();document.getElementById('nextButton').disabled=!ok;document.getElementById('demographicStatus').textContent=ok?'':'Enter age as a whole number from 1 to 120, or leave it blank.';document.getElementById('demoAge').setAttribute('aria-invalid',ok?'false':'true');persist();});
+}
+function summaryHTML(includeRevised) {
+  let html="";
+  enabledPanels.forEach(panel=>{
+    if(!state.first[panel.id])return;
+    const first=state.first[panel.id].values,revised=state.revised[panel.id]?.values;
+    html+=`<section class="summary-card"><h2>${escapeHTML(predictionTag(panel))}</h2>${proposalBadgeHTML(panel)}<p class="small muted">${escapeHTML(panel.section)} · ${escapeHTML(panel.unit)}${panel.draft?" · Proposed comparison":""}</p><div class="grid-wrap"><table class="summary-table"><thead><tr><th>Periods</th><th>Comparison</th><th>First</th>${includeRevised?"<th>Revised</th><th>Final</th>":""}</tr></thead><tbody>`;
+    first.forEach((value,i)=>{
+      const changed=revised&&revised[i]!==value;
+      html+=`<tr${changed?' class="changed"':""}><td data-label="Periods">${panelWindows(panel)[Math.floor(i/panel.series.length)]}</td><td data-label="Comparison">${escapeHTML(panel.series[i%panel.series.length].label)}</td><td data-label="First">${format(value)}</td>${includeRevised?'<td data-label="Revised">'+(revised?format(revised[i]):"—")+'</td><td data-label="Final">'+format(revised?revised[i]:value)+'</td>':""}</tr>`;
+    });html+='</tbody></table></div></section>';
+  });return html;
+}
+function exportData() {
+  return {
+    demo:true,specification:"Revising Sliders 10.12.26.docx",feedback:["Feedback Interface - Oct 14, 2026 LSC vs3.pdf","qualtrics_demo_2026_10_15, HS.pdf","qualtrics_demo_2026_10_15ddw.pdf","PI mtg, 2026.10.19.txt"],version:SETTINGS.version,
+    tutorial_completed_at:state.practice.completedAt,
+    demographics:state.demographics,
+    additional_information:{provided:!!SETTINGS.additionalInformation.trim(),text:SETTINGS.additionalInformation,seen_at:state.informationSeenAt},
+    started_at:state.startedAt,finished_at:state.finishedAt,
+    revision_requested:state.revisionRequested,revision_choice_at:state.revisionChoiceAt,
+    windows:SETTINGS.windows,
+    mental_health_measure:{definition:SETTINGS.mentalHealthDefinition,review_note:SETTINGS.mentalHealthPending},
+    consumption_benchmark:{...SETTINGS.benchmark,period:SETTINGS.consumptionPeriod},
+    mechanisms:state.mechanisms?{...state.mechanisms,explanation_saved_at:state.mechanismExplanationSavedAt,items:MECHANISMS,rating_labels:RATINGS,wording_provisional:true}:null,
+    panels:enabledPanels.map(panel=>({id:panel.id,document_label:panel.documentLabel||panel.id,title:panel.title,windows:panelWindows(panel),axis:{initial_min:panel.min??SETTINGS.min,initial_max:panel.max??SETTINGS.max,step:panel.step??SETTINGS.step,typed_amounts_expand:!!panel.money},unit:panel.unitCode,unit_label:panel.unit,proposed:!!panel.draft,alternative_version:!!panel.alternative,proposal_version:panel.proposalVersion||null,proposal_label:panel.proposalLabel||null,contrasts:panel.series.map(s=>s.label),definition:panel.explanation,context:panel.context||null,first_saved_at:state.first[panel.id]?.savedAt||null,revised_saved_at:state.revised[panel.id]?.savedAt||null,
+      responses:panelWindows(panel).flatMap((window,r)=>panel.series.map((series,s)=>{
+        const i=r*panel.series.length+s,first=state.first[panel.id]?.values[i]??null,second=state.revised[panel.id]?.values[i]??null;
+        return {window,contrast:series.label,first,revised:second,final:second===null?first:second,changed:second===null?false:second!==first};
+      }))
+    }))
+  };
+}
+function download(name,content,type) {
+  const url=URL.createObjectURL(new Blob([content],{type}));const a=document.createElement("a");a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
+}
+function csvData(data) {
+  const rows=[["panel_id","document_label","unit","proposed_contrast","reference_window","comparison","first_answer","revised_answer","final_answer","changed","revision_requested","first_saved_at","revised_saved_at","revision_choice_at","additional_information_provided","additional_information_seen_at","age","country_of_residence","discipline","professional_title"]];
+  data.panels.forEach(panel=>panel.responses.forEach(response=>rows.push([panel.id,panel.document_label,panel.unit,panel.proposed,response.window,response.contrast,response.first,response.revised,response.final,response.changed,data.revision_requested,panel.first_saved_at,panel.revised_saved_at,data.revision_choice_at,data.additional_information.provided,data.additional_information.seen_at,data.demographics?.age,data.demographics?.country,data.demographics?.discipline,data.demographics?.title])));
+  return '\ufeff'+rows.map(row=>row.map(csvCell).join(",")).join("\r\n");
+}
 
-<section id="research" class="section">
-  <h2>Research</h2>
-
-  
-  <div class="jmp-card">
-    <p class="jmp-label">Job Market Paper</p>
-    <h3 class="paper-title">When Solar Energy Reaches the Poor: Evidence from Solar Expansion in China <span class="badge">working paper</span></h3>
-    <p class="paper-authors">Single-authored</p>
-    <details>
-      <summary>Abstract</summary>
-      <p>I study whether linking solar investment to poverty alleviation can reduce the local environmental costs of solar expansion in China. I use satellite data on 30,023 solar plants to study forest loss around nearby villages. Using a spatial difference-in-differences design, I estimate that annual forest loss near these villages rises by 7.7 percent after the first nearby plant appears in satellite imagery, relative to changes in forest farther away. The estimated increase is larger in lower-income counties. I then study China&#39;s Solar Energy Poverty Alleviation Program (SEPAP), which financed solar stations and assigned their revenues to poor households and villages. Using the same spatial design, I estimate a 10.7 percent decline in forest loss near host villages after the program began in 2014. To examine possible mechanisms, I use household panel data and a difference-in-differences design based on SEPAP county designation in 2014 and 2016. The share of households reporting firewood as their main cooking fuel falls by about 7 percent, while the share reporting electricity rises by 46 percent. Children&#39;s reported respiratory illness also declines by about 17 percent, with no detectable changes in other reported diseases. This decline is larger among children who spent more time on household chores before designation. These patterns are consistent with reduced firewood reliance and lower exposure to indoor smoke. The findings suggest that solar development linked to poverty alleviation can benefit local forests and children&#39;s health.</p>
-    </details>
-    
-  </div>
-  
-
-  
-  <h3 class="group-heading">Publications</h3>
-  
-  <div class="paper">
-    <h4 class="paper-title">Psychological Barriers to Participation in the Labor Market: Evidence from Rural Ghana <span class="badge badge-pub">published</span></h4>
-    <p class="paper-authors">with Leandro Carvalho, Damien de Walque, Crick Lund, Heather Schofield, Vincent Somville</p>
-    <p class="paper-venue">Journal of Development Economics, 181 (2026), 103734</p>
-    <details>
-      <summary>Abstract</summary>
-      <p>Mental health conditions are strongly associated with lower labor market participation, but the underlying channels remain unclear. We conduct a two-phase study of women in rural Ghana to examine job take-up and work outcomes. In the first phase, we ask whether women would accept cash-for-work jobs during the lean season. Women with depression or anxiety are much more likely to decline work outside the home, but equally likely to accept work-from-home positions. In the second phase, we randomly offer home-based jobs to women willing to work from home. Neither depression nor anxiety predicts work completion, earnings, or quit rates. These findings suggest that barriers to accepting work outside the home help explain the association between mental health and labor market participation, and highlight home-based employment as a potential response.</p>
-    </details>
-    <p class="paper-links"><a href="https://heatherschofield.net/wp-content/uploads/2026/02/carvalho-et-al-psych-barriers-to-participation-in-the-labor-market.pdf">PDF</a> &middot; <a href="https://voxdev.org/topic/labour-markets/how-mental-health-affects-womens-labour-force-participation-ghana">VoxDev summary</a></p>
-  </div>
-  
-  
-
-  
-  <h3 class="group-heading">Working Papers</h3>
-  
-  <div class="paper">
-    <h4 class="paper-title">Heat, Economic Stress, and Mental Health: Evidence from Indonesia <span class="badge">revise and resubmit</span></h4>
-    <p class="paper-authors">with Simon Taye, Damien de Walque, Heather Schofield, Hao Wang</p>
-    <p class="paper-venue">Revise and resubmit, Frontiers in Behavioral Economics</p>
-    <details>
-      <summary>Abstract</summary>
-      <p>Evidence on the relationship between heat and mental health varies across populations. We examine whether underlying economic stress explains this heterogeneity using panel data from Indonesia and three types of economic shocks: income losses driven by international palm oil price changes, sudden large increases in fuel costs, and job loss. In the general population, we find no association between temperature and depressive symptoms, measured using the CES-D scale, and can rule out even small harmful effects. Among those experiencing negative economic shocks, however, heat is associated with increases in depressive symptoms of 0.044–0.09 standard deviations per degree Celsius. As climate change increases both the frequency of extreme heat and the prevalence of economic shocks, our findings suggest that the psychological toll of a warming climate will be concentrated among the most economically vulnerable.</p>
-    </details>
-    <p class="paper-links"><a href="/papers/wei-taye-dewalque-schofield-wang-heat-mental-health.pdf">PDF</a></p>
-  </div>
-  
-  
-
-  
-  <h3 class="group-heading">Work in Progress</h3>
-  
-  <div class="paper">
-    <h4 class="paper-title">The Causal Effects of Income Volatility and Income Risk <span class="badge">draft coming soon</span></h4>
-    <p class="paper-authors">with Leandro Carvalho, Damien de Walque, Nicolas Grandstaff, Heather Schofield, Vincent Somville</p>
-  </div>
-  
-  
-</section>
-
-
-<section id="teaching" class="section">
-  <h2>Teaching</h2>
-  <p class="teaching-intro">Teaching Assistant, Norwegian School of Economics (NHH):</p>
-  <ul class="teaching-list">
-    
-    <li><span class="course">Environmental Policy Analysis</span> <span class="term">2025</span></li>
-    
-    <li><span class="course">Development Economics</span> <span class="term">2024</span></li>
-    
-    <li><span class="course">Diversity in Firms</span> <span class="term">2024</span></li>
-    
-    <li><span class="course">Petroleum Economics</span> <span class="term">2023</span></li>
-    
-    <li><span class="course">Econometrics</span> <span class="term">2022</span></li>
-    
-  </ul>
-</section>
-
-
-<section id="presentations" class="section">
-  <h2>Presentations</h2>
-  <ul class="teaching-list">
-    
-    <li><span class="course">European Association of Environmental and Resource Economists (EAERE)</span> <span class="term">Bergen, 2025</span></li>
-    
-    <li><span class="course">Nordic Conference in Development Economics</span> <span class="term">Gothenburg, 2023</span></li>
-    
-  </ul>
-</section>
-
-
-<section id="contact" class="section">
-  <h2>Contact</h2>
-  <p>
-    <a href="mailto:jingyao.wei@nhh.no">jingyao.wei@nhh.no</a><br>
-    Department of Economics, Norwegian School of Economics (NHH)<br>
-    Helleveien 30, 5045 Bergen, Norway
-  </p>
-</section>
-
-
-  </main>
-
-  <footer class="site-footer">
-    <p>&copy; 2026 Jingyao Wei &middot; Created using <a href="https://garyking.org/mysite">GaryKing.org/mysite</a></p>
-  </footer>
+function csvCell(value) {
+  let text=String(value??"");
+  if(typeof value!=="number"&&/^[=+@\-\t\r]/.test(text))text="'"+text;
+  return '"'+text.replace(/"/g,'""')+'"';
+}
+function mechanismCSV(data) {
+  const m=data.mechanisms;
+  const rows=[["reason_id","reason","importance_code","importance_label","explanation","ratings_saved_at","explanation_saved_at"]];
+  if(m){
+    m.items.forEach(item=>rows.push([item.id,item.label,m.ratings[item.id],m.rating_labels[Number(m.ratings[item.id])],m.details[item.id]||'',m.savedAt,m.explanation_saved_at]));
+    if(m.other)rows.push(["other",m.other,m.otherRating,m.rating_labels[Number(m.otherRating)],m.details.other||'',m.savedAt,m.explanation_saved_at]);
+  }
+  return '\ufeff'+rows.map(row=>row.map(csvCell).join(',')).join('\r\n');
+}
+function renderSummary() {
+  screen.innerHTML=`<div class="kicker">Demo complete</div><h1>Your predictions are ready to review</h1><p class="lead">Revision requested: <strong>${state.revisionRequested?"Yes":"No"}</strong>.</p><p>${state.revisionRequested?"The first and revised values are preserved separately. Changed predictions are highlighted below.":"Your first answers are the final answers. The revised-answer fields remain blank."}</p><div class="download-row"><button class="secondary" id="downloadCSV">Download answers (CSV)</button><button class="secondary" id="downloadJSON">Download full record (JSON)</button><button class="secondary" id="downloadMechanisms">Download reasons (CSV)</button></div><p class="small muted">Downloads stay under your control. This demo has not sent answers to the study team or Qualtrics.</p>${summaryHTML(true)}${mechanismSummaryHTML()}${demographicSummaryHTML()}`;
+  document.getElementById("downloadCSV").onclick=()=>download("sspp-demo-answers.csv",csvData(exportData()),"text/csv;charset=utf-8");
+  document.getElementById("downloadJSON").onclick=()=>download("sspp-demo-answers.json",JSON.stringify(exportData(),null,2),"application/json");
+  document.getElementById("downloadMechanisms").onclick=()=>download("sspp-demo-reasons.csv",mechanismCSV(exportData()),"text/csv;charset=utf-8");
+  setNavigation("",null,"You can go back to review the introduction, tutorial, and locked answers.");
+}
+function openDialog(title,html) {document.getElementById("dialogTitle").textContent=title;document.getElementById("dialogBody").innerHTML=html;dialog.showModal();}
+document.getElementById("faqButton").onclick=()=>openDialog("FAQ & reference",`<div class="faq-body"><h2>What do the treatment arms mean?</h2><p>Control receives no study work. Stable receives 9 bags every period. Predictable receives 3 bags in three periods and 15 in three periods, with the whole schedule known in advance. Risky receives 3 or 15 bags with equal probability, revealed at the start of each period.</p><h2>What are participants doing?</h2><p>Stitching bags at home with flexible hours, at roughly two hours per bag. The piece rate is constant across treatment arms. Stable and Predictable schedules were explained with comprehension questions. Risky assignments were revealed by scratchcards.</p><h2>What do 1–2, 1–4, and 1–6 mean?</h2><p>They include observations from the first two, first four, and all six two-week periods. Each longer window includes earlier periods. Predict an average difference using those observations; do not add coefficients or total spending across periods. The high-versus-low comparison uses all six periods.</p><h2>Which units should I enter?</h2><p>Mental health uses standard deviations from −0.50 to +0.50. Consumption uses differences in Ghana cedis (GHC) per household per two-week period, not logs, percentages, or standard deviations. Its starting graph range is provisional and expands to include typed amounts.</p><h2>What is the mental-health index?</h2><p>${escapeHTML(SETTINGS.mentalHealthDefinition)}</p><details><summary>Technical definition and review status</summary><p>The current analysis uses an inverse-covariance-weighted PHQ-2/GAD-2 index, with symptom scales reversed and the combined index standardized to the Control group at baseline.</p><p>${escapeHTML(SETTINGS.mentalHealthPending)}</p></details>${implementationHTML()}<h2>Why ask about high- and low-work periods?</h2><p>This asks whether consumption differs between periods with 15 versus 3 assigned bags, separately for Predictable and Risky. It is a within-arm comparison, not a treatment–Control effect. The precise estimation sample and consumption definition remain under review.</p><h2>Can I go back?</h2><p>Yes. Back revisits earlier pages and preserves unfinished entries. Submitted predictions, ratings, explanations and the revision decision are read-only. Return to current page resumes where you left off.</p><h2>What happens if I revise?</h2><p>After the additional-information step, you can revise the three numerical prediction pages. Your first answers stay locked. Ratings and explanations are collected once. If the information page is still marked pending, the demo has provided no new study evidence.</p><h2>Are my answers sent anywhere?</h2><p>No. Answers are saved in this browser tab where supported. Download numerical answers and reasons as CSV, or the full record as JSON. This prototype is not yet connected to Qualtrics.</p></div>`);
+document.getElementById("reviewButton").onclick=()=>openDialog("Your locked first answers",'<p class="small muted">Read-only. The optional revision round records new values separately.</p>'+summaryHTML(false)+mechanismSummaryHTML());
+document.getElementById("closeDialog").onclick=()=>dialog.close();
+document.getElementById("resetButton").onclick=()=>openDialog("Start a new demo?",'<p>This clears the answers stored for this demo in this browser tab. Download your completed answers first if you want to keep them.</p><button class="primary" id="confirmReset">Clear answers and restart</button>');
+document.getElementById("dialogBody").addEventListener("click",event=>{if(event.target.id==="confirmReset"){state=newState();persist();dialog.close();render();}});
+render();
+</script>
 </body>
 </html>
